@@ -2,7 +2,7 @@
 // Inclui o autoload do Composer para carregar as dependências
 require __DIR__ . '/../vendor/autoload.php';
 
-
+//a
 // Função para gerar um token numérico
 function gerarTokenNumerico($tamanho = 6) {
     return mt_rand(pow(10, $tamanho-1), pow(10, $tamanho)-1);
