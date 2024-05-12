@@ -7,9 +7,14 @@ CREATE TABLE usuarios (
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     cpf VARCHAR(14) NOT NULL,
-    telefone VARCHAR(20) NOT NULL
+    telefone VARCHAR(20) NOT NULL,
+    token VARCHAR(10) NOT NULL,
+    twoef VARCHAR(255) NOT NULL,
+    flag2fa INT(1) DEFAULT 0    
 );
 
 SELECT * FROM usuarios;
 
-DELETE FROM usuarios WHERE ID=4;
+DROP TABLE usuarios;
+DELETE FROM usuarios where id = 1;
+FROM usuarios WHERE id = 15;
