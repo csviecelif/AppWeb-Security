@@ -1,6 +1,13 @@
 <?php
 // Inclui o autoload do Composer para carregar as dependências
+session_start();
+
+use OTPHP\TOTP;
+
 require __DIR__ . '/../vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 
 // Função para gerar um token numérico de 6 dígitos
 function gerarTokenNumerico($tamanho = 6) {
@@ -78,21 +85,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
+    $otp = TOTP::generate();
+    $twoef = $otp->getSecret();
+
+
+
     // Prepara a declaração SQL para inserir os dados na tabela de usuários
-    $sql_insert_user = "INSERT INTO usuarios (nomeCompleto, email, senha, cpf, telefone, token) 
-                        VALUES (?, ?, ?, ?, ?, ?)";
+    $sql_insert_user = "INSERT INTO usuarios (nomeCompleto, email, senha, cpf, telefone, token, twoef) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?)";
 
     // Prepara a declaração SQL usando uma instrução preparada para evitar SQL injection
     $stmt_insert_user = $conn->prepare($sql_insert_user);
 
     // Vincula os parâmetros da declaração SQL
-    $stmt_insert_user->bind_param("ssssss", $nomeCompleto, $email, $senhaHash, $cpf, $telefone, $token);
+    $stmt_insert_user->bind_param("sssssss", $nomeCompleto, $email, $senhaHash, $cpf, $telefone, $token, $twoef);
+
+    $query = "SELECT * FROM usuarios WHERE email='$email'";
 
     // Após o cadastro ser realizado com sucesso e o e-mail enviado com o token
     if ($stmt_insert_user->execute()) {
-        // Redireciona para o envio do token
-        header("Location: enviar_token.php");
-        exit;
+        try {
+
+            $userId = $conn->insert_id;
+            // Armazenar o ID do usuário na sessão
+            $_SESSION['userId'] = $userId;
+            
+            // Configurações do servidor SMTP para envio de e-mail
+            $mail = new PHPMailer(true);
+
+            // Configurações do servidor SMTP para envio de e-mail
+            $mail->isSMTP();
+            $mail->SMTPDebug = 2;
+            $mail->SMTPAuth = true;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 465;
+            $mail->Username = 'globaloportuna@gmail.com';
+            $mail->Password = 'qgvm brod pjrl wflz';
+            $mail->setFrom('globaloportuna@gmail.com', 'Global Oportuna');
+            $mail->addAddress($email, ''); // Define o destinatário
+            $mail->isHTML(true);
+            $mail->Subject = 'Token de Confirmação de Cadastro';
+            $mail->Body = 'Seu token de confirmação é: ' . $token;
+
+            // Envia o e-mail
+            $mail->send();
+            echo 'E-mail enviado com sucesso! Verifique sua caixa de entrada.';
+
+            // Redireciona para a página de validação do token após enviar o e-mail
+            header("Location: validar_token.php?email=" . urlencode($email));
+            exit;
+        } catch (Exception $e) {
+            echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
+        }
     } else {
         // Erro ao cadastrar usuário
         echo "Erro ao cadastrar o usuário: " . $stmt_insert_user->error;
@@ -101,5 +146,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fecha a declaração e a conexão com o banco de dados
     $stmt_insert_user->close();
     $conn->close();
+
 }
 ?>

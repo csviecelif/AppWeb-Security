@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Token válido, realizar ação de confirmação (ex: atualizar status de confirmação no banco de dados)
 
         // Redireciona para a página logado.html após validar o token com sucesso
-        header("Location: logado.html");
+        header("Location: 2fa.html");
         exit;
     } else {
         // Token inválido, exibir uma mensagem de erro
