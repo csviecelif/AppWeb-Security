@@ -2,11 +2,8 @@
 
 
     use OTPHP\TOTP; //import da biblioteca
-
     require '..\vendor\autoload.php';
-
     require_once '../login/connection.php'; // conexao com o banco de dados
-
     session_start();
 
     $response = array();

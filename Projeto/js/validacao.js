@@ -51,6 +51,12 @@ function validarFormularioCadastro() {
         return false;
     }
 
+    if (senha ==confirmarSenha) {
+
+        var senha = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
+    }
+    
+
     // Validar CPF
     if (!validarCPF(cpf)) {
         alert('Por favor, informe um CPF válido no formato 999.999.999-99.');
@@ -62,6 +68,8 @@ function validarFormularioCadastro() {
         alert('Por favor, informe um telefone válido no formato (99) 99999-9999');
         return false;
     }
+
+
 
     return true; // Permite o envio do formulário se todas as validações passarem
 }

@@ -19,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtém os dados do formulário
     $nomeCompleto = $_POST["nomeCompleto"];
     $email = $_POST["email"];
-    $senhaHash = $_POST["senha"]; // Hash SHA-256 da senha recebida do formulário
+    $senha = $_POST["senha"];
+    $senhaHash = hash('sha256', $senha);
     $cpf = $_POST["cpf"]; // Supondo que também haja um campo CPF
     $telefone = $_POST["telefone"]; // Supondo que também haja um campo Telefone
 

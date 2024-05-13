@@ -2,7 +2,7 @@ CREATE DATABASE normal;
 
 USE normal;
 CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT AUTO_INCREMENT PRIMARY KEY,
     nomeCompleto VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
@@ -16,5 +16,3 @@ CREATE TABLE usuarios (
 SELECT * FROM usuarios;
 
 DROP TABLE usuarios;
-DELETE FROM usuarios where id = 1;
-FROM usuarios WHERE id = 15;
