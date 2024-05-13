@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Autenticação de Usuário</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="../js/validacao.js"></script>
+    <script src="../js/login2FA.js"></script>
 </head>
 <body>
     <h2>Login</h2>
-    <form action="autenticar.php" method="post">
+    <form action="autenticar.php" method="post" onsubmit="return hashSenhaSubmit()">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
@@ -18,5 +20,14 @@
     </form>
 
     <p><a href="../recuperar_senha/index.html">Esqueceu sua senha?</a></p>
+
+    <script>
+        function hashSenhaSubmit() {
+            var senha = document.getElementById('senha').value;
+            var senhaHash = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
+            document.getElementById('senha').value = senhaHash; // Substitui a senha original pelo hash
+            return true; // Permite que o formulário seja enviado
+        }
+    </script>
 </body>
 </html>

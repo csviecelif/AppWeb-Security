@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Usuário</title>
-    <script src="../js/validacao.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="../js/sha256.js"></script>
+    <script src="../js/validacao.js"></script>
 </head>
 <body>
     <h2>Cadastro de Usuário</h2>
@@ -30,33 +30,5 @@
 
         <input type="submit" value="Cadastrar">
     </form>
-
-    <script>
-        // Função para validar o formulário de cadastro antes de enviar
-        function validarFormularioCadastro() {
-            var senha = document.getElementById('senha').value;
-            var confirmarSenha = document.getElementById('confirmarSenha').value;
-
-            // Validar senha forte
-            if (!validarSenhaForte(senha)) {
-                alert('A senha deve ter pelo menos 8 caracteres, incluindo pelo menos um número, uma letra maiúscula, uma letra minúscula e um caracter especial.');
-                return false;
-            }
-
-            // Validar confirmação de senha
-            if (senha !== confirmarSenha) {
-                alert('As senhas informadas não coincidem.');
-                return false;
-            }
-
-            // Calcular o hash SHA-256 da senha
-            var senhaHash = calcularSHA256(senha);
-
-            // Substituir a senha original pelo hash antes de enviar o formulário
-            document.getElementById('senha').value = senhaHash;
-
-            return true; // Permite o envio do formulário se todas as validações passarem
-        }
-    </script>
 </body>
 </html>

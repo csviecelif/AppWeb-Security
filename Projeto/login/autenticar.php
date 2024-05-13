@@ -1,52 +1,39 @@
 <?php
-// Inclua aqui suas configurações de conexão com o banco de dados
-$servername = "127.0.0.1";
-$username = "root";
-$password = "PUC@1234";
-$dbname = "normal";
+session_start();
+require 'connection.php';  // Certifique-se de que o caminho está correto e que 'connection.php' configura $con
 
-// Verifica se o método de requisição é POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtém os dados do formulário
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'], $_POST['senha'])) {
+    $email = $_POST['email'];
+    $senhaHashCliente = $_POST['senha']; // Hash SHA-256 da senha recebido do cliente
 
-    // Cria uma conexão com o banco de dados usando MySQLi
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Verifica a conexão
-    if ($conn->connect_error) {
-        die("Falha na conexão com o banco de dados: " . $conn->connect_error);
-    }
-
-    // Prepara a consulta SQL para verificar o usuário
-    $sql = "SELECT * FROM usuarios WHERE email = ?";
-    $stmt = $conn->prepare($sql);
+    $stmt = $con->prepare("SELECT senha, flag2fa FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        // Usuário encontrado, verificar a senha
-        $row = $result->fetch_assoc();
-        $senha_hash = $row["senha"]; // Senha armazenada no banco de dados (deve ser um hash)
-
-        // Verifica se a senha fornecida corresponde à senha armazenada
-        if (password_verify($senha, $senha_hash)) {
-            // Senha correta, redireciona para a página logado.html
-            header("Location: /../cadastro/logado.html");
-            exit();
+    if ($row = $result->fetch_assoc()) {
+        // Verificar senha comparando os hashes diretamente
+        if ($senhaHashCliente === $row['senha']) {
+            $_SESSION['email'] = $email;  // Armazena o email na sessão para uso posterior
+            $_SESSION['userId'] = $row['userId'];  // Armazena o ID do usuário na sessão
+            // Verificar status da flag 2FA
+            if ($row['flag2fa'] == 0) {
+                // Redirecionar para a página de configuração do 2FA
+                header("Location: ../cadastro/2fa.html");
+                exit;
+            } else {
+                // Se 2FA está ativa, redirecionar para a página que solicita o código 2FA
+                $_SESSION['email'] = $email;  // Armazena o email na sessão para uso posterior
+                header("Location: ../cadastro/2fa.html");  // Página que solicita o código 2FA
+                exit;
+            }
         } else {
-            // Senha incorreta
-            echo "Senha incorreta. Tente novamente.";
+            echo "Senha incorreta!";
         }
     } else {
-        // Usuário não encontrado
-        echo "Usuário não encontrado. Verifique o e-mail digitado.";
+        echo "Usuário não encontrado!";
     }
-
-    // Fecha a declaração e a conexão com o banco de dados
     $stmt->close();
-    $conn->close();
 }
+$con->close();
 ?>
