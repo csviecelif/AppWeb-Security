@@ -1,5 +1,25 @@
 <?php
     session_start();
+    define('SESSION_EXPIRATION_TIME', 900);
+
+function isSessionExpired() {
+    if (isset($_SESSION['login_time'])) {
+        if (time() - $_SESSION['login_time'] > SESSION_EXPIRATION_TIME) {
+            return true;
+        }
+    }
+    return false;
+}
+
+    if (isSessionExpired()) {
+        session_unset(); // Remove todas as variáveis de sessão
+        session_destroy(); // Destroi a sessão
+        header("Location: ../login/index.html"); // Redireciona para a página de login
+        exit;
+    } else {
+        // Atualiza o timestamp da sessão
+        $_SESSION['login_time'] = time();
+    }
 
     require_once '../login/connection.php'; // conexao com o banco de dados
 

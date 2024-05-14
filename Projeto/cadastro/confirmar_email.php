@@ -1,12 +1,34 @@
 <?php
 // Inclui o autoload do Composer para carregar as dependências
 session_start();
-
 use OTPHP\TOTP;
-
 require __DIR__ . '/../vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+
+define('SESSION_EXPIRATION_TIME', 900);
+
+function isSessionExpired() {
+    if (isset($_SESSION['login_time'])) {
+        if (time() - $_SESSION['login_time'] > SESSION_EXPIRATION_TIME) {
+            return true;
+        }
+    }
+    return false;
+}
+
+if (isSessionExpired()) {
+    session_unset(); // Remove todas as variáveis de sessão
+    session_destroy(); // Destroi a sessão
+    header("Location: ../login/index.html"); // Redireciona para a página de login
+    exit;
+} else {
+    // Atualiza o timestamp da sessão
+    $_SESSION['login_time'] = time();
+}
+
+
 
 
 // Função para gerar um token numérico de 6 dígitos

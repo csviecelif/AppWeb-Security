@@ -1,11 +1,30 @@
 <?php
-session_start();
-
 use OTPHP\TOTP; //import da biblioteca OTPHP
-
 require '..\vendor\autoload.php';
 require_once '../login/connection.php'; // conexão com o banco de dados
+session_start();
 
+// Tempo máximo de sessão em segundos (1 hora)
+define('SESSION_EXPIRATION_TIME', 900);
+
+function isSessionExpired() {
+    if (isset($_SESSION['login_time'])) {
+        if (time() - $_SESSION['login_time'] > SESSION_EXPIRATION_TIME) {
+            return true;
+        }
+    }
+    return false;
+}
+
+if (isSessionExpired()) {
+    session_unset(); // Remove todas as variáveis de sessão
+    session_destroy(); // Destroi a sessão
+    header("Location: ../login/index.html"); // Redireciona para a página de login
+    exit;
+} else {
+    // Atualiza o timestamp da sessão
+    $_SESSION['login_time'] = time();
+}
 $response = array();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SESSION['userId'])) {
