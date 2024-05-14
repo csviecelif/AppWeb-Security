@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SES
     $userId = $_SESSION['userId'];
 
     // Verifique o OTP com base no userId do usuário
-    $stmt = $con->prepare("SELECT twoef FROM usuarios WHERE userId = ?");
+    $stmt = $con->prepare("SELECT twoef FROM usuarios WHERE email = ?");
     $stmt->bind_param("i", $userId);
     $stmt->execute();
     $result = $stmt->get_result();

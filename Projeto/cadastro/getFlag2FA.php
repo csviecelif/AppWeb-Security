@@ -27,7 +27,7 @@ function isSessionExpired() {
         $userId = $_SESSION['userId'];
         
         // Verificar a Flag2FA para o usuário
-        $query = "SELECT flag2fa FROM usuarios WHERE userId = $userId";
+        $query = "SELECT flag2fa FROM usuarios WHERE email = '$userId'";
         $result = mysqli_query($con, $query);
         
         if ($result) {

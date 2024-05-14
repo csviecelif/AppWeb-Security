@@ -5,15 +5,8 @@ window.addEventListener('pageshow', function (event) {
     .then(response => response.json())
     .then(data => {
         if (data === "False") {
-            Swal.fire({
-                title: 'Você deve estar logado para acessar esta página',
-                text: 'Clique no botão abaixo para ir à página de login',
-                icon: 'error',
-                confirmButtonText: 'Logue',
-                position: "center"
-            }).then(function () {
-                location.href = "../login/index.html";
-            });
+            alert('Você deve estar logado para acessar esta página');
+            location.href = "../login/index.html";
         } else {
             const logged = `
                 <div id="container" class="container">
@@ -68,49 +61,49 @@ window.addEventListener('pageshow', function (event) {
 
 function get2FACode() {
     fetch('../cadastro/get2FACode.php')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na solicitação. Código de status: ' + response.status);
-            }
-            return response.json();
-        })
-        .then(data => gerarQRCode(data.secret))
-        .catch(error => console.error('Erro durante a solicitação do QR Code:', error));
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na solicitação. Código de status: ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => gerarQRCode(data.secret))
+    .catch(error => console.error('Erro durante a solicitação do QR Code:', error));
 }
 
-function gerarQRCode (secret) {
+function gerarQRCode(secret) {
     const tag = "otpauth://totp/GlobalOpportuna?secret=";
     const qrCodeUri = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(tag + secret) + '&size=200x200&ecc=M';
     const qrCodeContainer = document.getElementById('qrCodeContainer');
-    qrCodeContainer.innerHTML = '<img src="' + qrCodeUri + '" alt = "QRCode do 2FA">';
+    qrCodeContainer.innerHTML = '<img src="' + qrCodeUri + '" alt="QRCode do 2FA">';
 }
 
 function Ativar2FA() {
     const userInput = document.getElementById('form').elements['OTP'].value;
     fetch('../cadastro/Ativar2FA.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: 'OTP=' + encodeURIComponent(userInput)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na solicitação. Código de status: ' + response.status);
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.success) {
-                console.log('OTP Válido');
-                alert('OTP válido! 2FA ATIVADO!!');
-                location.href = "../login/logado.html";
-            } else {
-                console.log('Falha: ' + data.error);
-                alert('OTP Inválido. Não ativado.');
-            }
-        })
-        .catch(error => console.error(error.message));
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'OTP=' + encodeURIComponent(userInput)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na solicitação. Código de status: ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            console.log('OTP Válido');
+            alert('OTP válido! 2FA ATIVADO!!');
+            location.href = "../login/logado.html";
+        } else {
+            console.log('Falha: ' + data.error);
+            alert('OTP Inválido. Não ativado.');
+        }
+    })
+    .catch(error => console.error(error.message));
 }
 
 function VerifyOTP() {
