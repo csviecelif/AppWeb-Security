@@ -5,22 +5,23 @@ define('SESSION_EXPIRATION_TIME', 900);
 
 function isSessionExpired() {
     if (isset($_SESSION['login_time'])) {
-        if (time() - $_SESSION['login_time'] > SESSION_EXPIRATION_TIME) {
-            return true;
-        }
+        return (time() - $_SESSION['login_time'] > SESSION_EXPIRATION_TIME);
     }
-    return false;
+    return true;
 }
 
 $response = array();
 
 if (!isset($_SESSION['userId']) || isSessionExpired()) {
-    session_unset(); // Remove todas as variáveis de sessão
-    session_destroy(); // Destroi a sessão
-    echo json_encode("False");
+    session_unset();
+    session_destroy();
+    $response['status'] = false;
+    $response['message'] = 'Sessão expirada ou usuário não autenticado.';
 } else {
-    // Atualiza o timestamp da sessão
     $_SESSION['login_time'] = time();
-    echo json_encode("True");
+    $response['status'] = true;
 }
+
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>

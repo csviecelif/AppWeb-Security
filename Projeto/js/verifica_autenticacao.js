@@ -1,4 +1,3 @@
-// verifica_autenticacao.js
 window.onload = function() {
     fetch('../cadastro/verificarsessao.php', {
         method: 'GET',
@@ -13,8 +12,8 @@ window.onload = function() {
         return response.json();
     })
     .then(data => {
-        if (data !== 'True') {
-            alert('Você deve estar logado para acessar esta página.');
+        if (!data.status) {
+            alert('Você deve estar logado para acessar esta página. ' + data.message);
             window.location.href = '../login/index.html';
         }
     })

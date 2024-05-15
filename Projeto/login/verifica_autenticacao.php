@@ -3,7 +3,7 @@ session_start();
 
 $response = array();
 
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['userId'])) {
     $response = "False";
     $_SESSION['mensagem'] = "Você deve estar logado para acessar esta página.";
 } else {

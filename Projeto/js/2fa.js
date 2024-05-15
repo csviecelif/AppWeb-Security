@@ -4,16 +4,9 @@ window.addEventListener('pageshow', function (event) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data === "False") {
-            Swal.fire({
-                title: 'Você deve estar logado para acessar esta página',
-                text: 'Clique no botão abaixo para ir à página de login',
-                icon: 'error',
-                confirmButtonText: 'Logue',
-                position: "center"
-            }).then(function () {
-                location.href = "../login/index.html";
-            });
+        if (data.status === false) { // Corrigido de `data === "False"` para `data.status === false`
+            alert('Você deve estar logado para acessar esta página');
+            location.href = "../login/index.html";
         } else {
             const logged = `
                 <div id="container" class="container">
@@ -24,7 +17,7 @@ window.addEventListener('pageshow', function (event) {
             `;
             document.body.innerHTML += logged;
 
-            fetch('../cadastro/getFlag2FA.php')
+            fetch('../cadastro/getFlag2FA_Cadastro.php')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro na solicitação. Código de status: ' + response.status);
@@ -33,7 +26,7 @@ window.addEventListener('pageshow', function (event) {
             })
             .then(data => {
                 if (data.flag2FA === 1) {
-                    console.log('Sucesso: A Flag2FA está ativada.');
+                    alert('Sucesso: A Flag2FA está ativada.');
                     const content = `
                         <form id="form">
                             <input type="text" name="OTP" placeholder="Coloque seu Código OTP" required="">
@@ -42,7 +35,7 @@ window.addEventListener('pageshow', function (event) {
                     `;
                     document.getElementById('box').innerHTML += content;
                 } else if (data.flag2FA === 0) {
-                    console.log('Flag2FA está desativada. Procedendo para gerar QR Code.');
+                    alert('Flag2FA está desativada. Procedendo para gerar QR Code.');
                     get2FACode();
                     const content = `
                         <div id="qrCodeContainer"></div>
@@ -65,7 +58,6 @@ window.addEventListener('pageshow', function (event) {
         console.error('Erro durante a verificação de sessão:', error);
     });
 });
-
 
 function get2FACode() {
     fetch('../cadastro/get2FACode.php')

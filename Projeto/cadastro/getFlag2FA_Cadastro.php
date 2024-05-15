@@ -2,24 +2,6 @@
 session_start();
 
 require_once '../login/connection.php'; // Conexão com o banco de dados
-define('SESSION_EXPIRATION_TIME', 900);
-
-function isSessionExpired() {
-    if (isset($_SESSION['login_time'])) {
-        return (time() - $_SESSION['login_time'] > SESSION_EXPIRATION_TIME);
-    }
-    return true;
-}
-
-if (isSessionExpired()) {
-    session_unset(); // Remove todas as variáveis de sessão
-    session_destroy(); // Destroi a sessão
-    header("Location: ../login/index.html"); // Redireciona para a página de login
-    exit;
-} else {
-    // Atualiza o timestamp da sessão
-    $_SESSION['login_time'] = time();
-}
 
 $response = array();
 
@@ -27,7 +9,7 @@ if (isset($_SESSION['userId'])) {
     $userId = $_SESSION['userId'];
 
     // Verificar a Flag2FA para o usuário
-    $query = "SELECT flag2FA FROM usuarios WHERE email = ?";
+    $query = "SELECT flag2FA FROM usuarios WHERE userId = ?";
     if ($stmt = mysqli_prepare($con, $query)) {
         mysqli_stmt_bind_param($stmt, 's', $userId);
         mysqli_stmt_execute($stmt);
@@ -50,5 +32,6 @@ if (isset($_SESSION['userId'])) {
 
 mysqli_close($con);
 
+header('Content-Type: application/json');
 echo json_encode($response);
 ?>

@@ -4,7 +4,7 @@ window.addEventListener('pageshow', function (event) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data === "False") {
+        if (data === false) {
             alert('Você deve estar logado para acessar esta página');
             location.href = "../login/index.html";
         } else {
@@ -17,7 +17,7 @@ window.addEventListener('pageshow', function (event) {
             `;
             document.body.innerHTML += logged;
 
-            fetch('../cadastro/getFlag2FA.php')
+            fetch('../cadastro/getflag2fa.php')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro na solicitação. Código de status: ' + response.status);
@@ -25,7 +25,10 @@ window.addEventListener('pageshow', function (event) {
                 return response.json();
             })
             .then(data => {
-                if (data.flag2FA === 1) {
+                if (data.error) {
+                    console.error('Erro ao consultar a Flag2FA no banco de dados:', data.error);
+                    alert('Erro ao consultar a Flag2FA no banco de dados: ' + data.error);
+                } else if (data.flag2FA === 1) {
                     console.log('Sucesso: A Flag2FA está ativada.');
                     const content = `
                         <form id="form">
@@ -59,78 +62,30 @@ window.addEventListener('pageshow', function (event) {
     });
 });
 
-function get2FACode() {
-    fetch('../cadastro/get2FACode.php')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro na solicitação. Código de status: ' + response.status);
-        }
-        return response.json();
-    })
-    .then(data => gerarQRCode(data.secret))
-    .catch(error => console.error('Erro durante a solicitação do QR Code:', error));
-}
-
-function gerarQRCode(secret) {
-    const tag = "otpauth://totp/GlobalOpportuna?secret=";
-    const qrCodeUri = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(tag + secret) + '&size=200x200&ecc=M';
-    const qrCodeContainer = document.getElementById('qrCodeContainer');
-    qrCodeContainer.innerHTML = '<img src="' + qrCodeUri + '" alt="QRCode do 2FA">';
-}
-
-function Ativar2FA() {
-    const userInput = document.getElementById('form').elements['OTP'].value;
-    fetch('../cadastro/Ativar2FA.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: 'OTP=' + encodeURIComponent(userInput)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro na solicitação. Código de status: ' + response.status);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            console.log('OTP Válido');
-            alert('OTP válido! 2FA ATIVADO!!');
-            location.href = "../login/logado.html";
-        } else {
-            console.log('Falha: ' + data.error);
-            alert('OTP Inválido. Não ativado.');
-        }
-    })
-    .catch(error => console.error(error.message));
-}
-
 function VerifyOTP() {
     const userInput = document.getElementById('form').elements['OTP'].value;
-
     fetch('../login/check2fa.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: 'OTP=' + encodeURIComponent(userInput)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro na solicitação. Código de status: ' + response.status);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            console.log('Sucesso: OTP válido.');
-            alert('OTP válido!');
-            location.href = "../login/logado.html";
-        } else {
-            console.log('Falha: ' + data.error);
-            alert('OTP inválido!');
-        }
-    })
-    .catch(error => console.error(error.message));
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'OTP=' + encodeURIComponent(userInput)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro na solicitação. Código de status: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                console.log('Sucesso: OTP válido.');
+                alert('OTP válido!');
+                location.href = "../login/logado.html";
+            } else {
+                console.log('Falha: ' + data.error);
+                alert('OTP inválido!');
+            }
+        })
+        .catch(error => console.error(error.message));
 }

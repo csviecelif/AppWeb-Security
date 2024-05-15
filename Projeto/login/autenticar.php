@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'connection.php';  // Certifique-se de que o caminho está correto e que 'connection.php' configura $con
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'], $_POST['senha'])) {
@@ -14,9 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'], $_POST['senha
     if ($row = $result->fetch_assoc()) {
         // Verificar senha comparando os hashes diretamente
         if ($senhaHashCliente === $row['senha']) {
-            session_start();
             $_SESSION['userId'] = $email;
-            //$_SESSION['email'] = $userId; // Definir a variável de sessão 'email'
+            $_SESSION['login_time'] = time(); // Configura o tempo de login
             header("Location: autenticar.html");  // Página que solicita o código 2FA
             exit;
         } else {
