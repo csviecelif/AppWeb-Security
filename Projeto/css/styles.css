@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../converted_image.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;  /* Reduz o width */
+    max-width: 280px;  /* Reduz o max-width */
+}
+
+h1, h2 {
+    margin-bottom: 8px; /* Reduz a margem inferior */
+    font-size: 22px; /* Ajusta o tamanho da fonte */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1px; /* Mantém a margem inferior mínima */
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="submit"], button {
+    width: 100%;
+    padding: 4px; /* Reduz o padding para diminuir a altura dos inputs */
+    margin: 2px 0; /* Mantém a margem mínima entre os elementos */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 13px; /* Reduz o tamanho da fonte */
+}
+
+button, input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px; /* Ajusta o padding dos botões */
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para a página de login */
+.login-container form {
+    width: 100%;
+}
+
+.login-container button {
+    margin: 10px 0;
+}
+
+/* Estilos específicos para a página de cadastro */
+.cadastro-container form {
+    width: 100%;
+}
+
+.cadastro-container label,
+.cadastro-container input {
+    margin: 1px 0; /* Reduz a margem entre os elementos do formulário de cadastro */
+}

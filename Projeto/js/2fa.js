@@ -29,7 +29,7 @@ window.addEventListener('pageshow', function (event) {
                     alert('Sucesso: A Flag2FA está ativada.');
                     const content = `
                         <form id="form">
-                            <input type="text" name="OTP" placeholder="Coloque seu Código OTP" required="">
+                            <input type="text" name="OTP" placeholder="Escaneie e insira o código" required="">
                         </form>
                         <button onclick="VerifyOTP()" type="button">Verificar</button>
                     `;
@@ -40,7 +40,7 @@ window.addEventListener('pageshow', function (event) {
                     const content = `
                         <div id="qrCodeContainer"></div>
                         <form id="form">
-                            <input type="text" name="OTP" placeholder="Coloque seu Código OTP">
+                            <input type="text" name="OTP" placeholder="Escaneie e insira o código" required="">
                         </form>
                         <button onclick="Ativar2FA()" type="button">Ativar</button>
                     `;
