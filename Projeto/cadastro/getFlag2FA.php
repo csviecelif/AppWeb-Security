@@ -2,7 +2,7 @@
 session_start();
 
 require_once '../login/connection.php'; // Conexão com o banco de dados
-define('SESSION_EXPIRATION_TIME', 900);
+define('SESSION_EXPIRATION_TIME', 9000);
 
 function isSessionExpired() {
     if (isset($_SESSION['login_time'])) {

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('SESSION_EXPIRATION_TIME', 900);
+define('SESSION_EXPIRATION_TIME', 9000);
 
 function isSessionExpired() {
     if (isset($_SESSION['login_time'])) {

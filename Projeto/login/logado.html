@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <script src="../js/verifica_autenticacao.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Página Logado</title>
+    </head>
 <body>
-    <h1>Bem-vindo, usuário autenticado!</h1>
-    <p>Você está acessando uma área restrita a usuários autenticados.</p>
+
+
+    <div class="button-container">
+        <h1>Autenticado!</h1>
+        
+        <!-- Nova seção para os botões -->
+        <div class="button-section">
+            <button id="offer-job" class="action-button">Quero oferecer emprego</button>
+            <button id="seek-job" class="action-button">Busco emprego</button>
+        </div>
+    </div>
+
+    <script src="../js/verifica_autenticacao.js"></script>
 </body>
 </html>
