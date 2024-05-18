@@ -89,3 +89,17 @@ function VerifyOTP() {
         })
         .catch(error => console.error(error.message));
 }
+fetch('../cadastro/getflag2fa.php')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na solicitação. Código de status: ' + response.status);
+        }
+        return response.text(); // Alterado de response.json() para response.text()
+    })
+    .then(data => {
+        console.log(data); // Exibe a resposta no console para análise
+        // Restante do código...
+    })
+    .catch(error => {
+        console.error('Erro durante a solicitação da Flag2FA:', error);
+    });

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validação de Cadastro</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css"/>
     <style>
         .container {
             margin-top: 50px;
@@ -28,15 +29,19 @@
                 
                 //Função para evitar XSS
                 $email = htmlspecialchars($_GET['email']);
+                echo "<div style='text-align: center;'>";
                 echo "<h2>Validação de Cadastro</h2>";
                 echo "<p>Um e-mail de confirmação foi enviado para <strong>{$email}</strong>. Insira o token recebido:</p>";
+                echo "</div>";
                 echo "<form action='processar_token.php' method='post'>";
                 echo "<input type='hidden' name='email' value='{$email}'>";
                 echo "<div class='form-group'>";
                 echo "<label for='token'>Token:</label>";
                 echo "<input type='text' id='token' name='token' class='form-control' required>";
                 echo "</div>";
-                echo "<button type='submit' class='btn btn-primary'>Validar</button>";
+                echo "<div style='text-align: center;'>";
+                echo "<button type='submit' class='btn btn-success'>Validar</button>";
+                echo "</div>";
                 echo "</form>";
             } else {
                 echo "<h2>Erro</h2>";
