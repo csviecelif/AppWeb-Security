@@ -47,10 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST["telefone"]; // Supondo que também haja um campo Telefone
 
     // Configurações de conexão com o banco de dados
-    $servername = "127.0.0.1"; // Endereço do servidor MySQL
-    $username = "root"; // Nome de usuário do banco de dados
-    $password = "PUC@1234"; // Senha do banco de dados
-    $dbname = "normal"; // Nome do banco de dados
+    $servername = getenv('DB_HOST');
+    $username = getenv('DB_USER');
+    $password = getenv('DB_PASSWORD');
+    $dbname = getenv('DB_NAME');    
 
     // Cria uma conexão com o banco de dados usando MySQLi
     $conn = new mysqli($servername, $username, $password, $dbname);
