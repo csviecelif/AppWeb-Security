@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../converted_image.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;  /* Reduz o width */
+    max-width: 280px;  /* Reduz o max-width */
+}
+
+h1, h2 {
+    margin-bottom: 8px; /* Reduz a margem inferior */
+    font-size: 22px; /* Ajusta o tamanho da fonte */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1px; /* Mantém a margem inferior mínima */
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="submit"], button {
+    width: 100%;
+    padding: 4px; /* Reduz o padding para diminuir a altura dos inputs */
+    margin: 2px 0; /* Mantém a margem mínima entre os elementos */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 13px; /* Reduz o tamanho da fonte */
+}
+
+button, input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px; /* Ajusta o padding dos botões */
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para a página de login */
+.login-container form {
+    width: 100%;
+}
+
+.login-container button {
+    margin: 10px 0;
+}
+
+/* Estilos específicos para a página de cadastro */
+.cadastro-container form {
+    width: 100%;
+}
+
+.cadastro-container label,
+.cadastro-container input {
+    margin: 1px 0; /* Reduz a margem entre os elementos do formulário de cadastro */
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinha os botões verticalmente */
+    height: 100vh;
+    background: url('../path/to/your/background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.action-button {
+    margin: 10px; /* Espaçamento entre os botões */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745; /* Cor verde */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #218838;
+}
+
+/* Ajuste para garantir que o conteúdo esteja centralizado */
+.button-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-group textarea,
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 4px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #28a745; /* Botão verde */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+}

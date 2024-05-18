@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+    <script src="../js/recuperar.js"></script>
+    <script src="../js/sha256.js"></script>
+</head>
+<body>
+    <h1>Redefinir Senha</h1>
+    <form action="redefinir.php" method="post" onsubmit="return validarFormularioCadastro();">
+        <label for="token">Token:</label>
+        <input type="text" id="token" name="token" required>
+
+        <label for="senha">Nova Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <button type="submit">Redefinir Senha</button>
+    </form>
+</body>
+</html>
