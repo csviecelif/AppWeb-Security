@@ -25,6 +25,7 @@
         <div class="form-container">
             <?php
             if (isset($_GET['email'])) {
+                
                 //Função para evitar XSS
                 $email = htmlspecialchars($_GET['email']);
                 echo "<h2>Validação de Cadastro</h2>";

@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-require_once 'connection.php'; // Inclui o arquivo de conexão
+require_once 'connection.php'; //Inclui o arquivo de conexão
 
 if (!isset($_SESSION['userId'])) {
-    // Redireciona para a página de login se a sessão não estiver ativa
+    //Redireciona para a página de login se a sessão não estiver ativa
     header('Location: ../login/index.html');
     exit();
 }
