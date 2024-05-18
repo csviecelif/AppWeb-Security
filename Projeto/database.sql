@@ -10,11 +10,11 @@ CREATE TABLE usuarios (
     telefone VARCHAR(20) NOT NULL,
     token VARCHAR(10) NOT NULL,
     twoef VARCHAR(255) NOT NULL,
-    flag2fa INT(1) DEFAULT 0
+    flag2fa INT(1) DEFAULT 0,
     bio TEXT,
     foto VARCHAR(255),
     cv VARCHAR(255),
-    certificados TEXT,
+    certificados TEXT
 );
 
 CREATE TABLE buscar_emprego (
@@ -24,10 +24,10 @@ CREATE TABLE buscar_emprego (
     habilidades_competencias TEXT NOT NULL,
     formacao_academica VARCHAR(255) NOT NULL,
     idiomas_falados VARCHAR(255) NOT NULL,
-    tipo_emprego_desejado ENUM('tempo integral', 'meio período', 'freelancer') NOT NULL,
+    data_nascimento DATE NOT NULL,
     area_interesse VARCHAR(255) NOT NULL,
     expectativa_salarial DECIMAL(10, 2) NOT NULL,
-    disponibilidade_inicio DATE NOT NULL,
+    pais_origem VARCHAR(255) NOT NULL,
     cv VARCHAR(255),
     certificados TEXT,
     bio TEXT NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE oferecer_emprego (
     userId INT NOT NULL,
     nome_empresa VARCHAR(255) NOT NULL,
     cargo VARCHAR(255) NOT NULL,
-    tipo_emprego ENUM('tempo integral', 'meio período', 'freelancer') NOT NULL,
+    pais_empresa VARCHAR(255) NOT NULL,
     setor VARCHAR(255) NOT NULL,
     descricao_vaga TEXT NOT NULL,
     requisitos_vaga TEXT NOT NULL,
@@ -60,3 +60,13 @@ CREATE TABLE oferecer_emprego (
 SELECT * FROM usuarios;
 
 DROP TABLE usuarios;
+
+
+SELECT * FROM usuarios;
+SELECT * FROM buscar_emprego;
+SELECT * FROM oferecer_emprego;
+
+DROP TABLE buscar_emprego;
+DROP TABLE oferecer_emprego;
+DROP TABLE usuarios;
+

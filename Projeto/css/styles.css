@@ -17,13 +17,13 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 80%;  /* Reduz o width */
-    max-width: 280px;  /* Reduz o max-width */
+    width: 80%; 
+    max-width: 280px;  
 }
 
 h1, h2 {
-    margin-bottom: 8px; /* Reduz a margem inferior */
-    font-size: 22px; /* Ajusta o tamanho da fonte */
+    margin-bottom: 8px; 
+    font-size: 22px; 
 }
 
 form {
@@ -36,16 +36,16 @@ form {
 label {
     width: 100%;
     text-align: left;
-    margin-bottom: 1px; /* Mantém a margem inferior mínima */
+    margin-bottom: 1px; 
 }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="submit"], button {
     width: 100%;
-    padding: 4px; /* Reduz o padding para diminuir a altura dos inputs */
-    margin: 2px 0; /* Mantém a margem mínima entre os elementos */
+    padding: 4px; 
+    margin: 2px 0; 
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 13px; /* Reduz o tamanho da fonte */
+    font-size: 13px; 
 }
 
 button, input[type="submit"] {
@@ -53,7 +53,7 @@ button, input[type="submit"] {
     color: white;
     border: none;
     font-size: 14px;
-    padding: 8px; /* Ajusta o padding dos botões */
+    padding: 8px; 
 }
 
 button:hover, input[type="submit"]:hover {
@@ -69,7 +69,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Estilos específicos para a página de login */
 .login-container form {
     width: 100%;
 }
@@ -78,32 +77,31 @@ a:hover {
     margin: 10px 0;
 }
 
-/* Estilos específicos para a página de cadastro */
 .cadastro-container form {
     width: 100%;
 }
 
 .cadastro-container label,
 .cadastro-container input {
-    margin: 1px 0; /* Reduz a margem entre os elementos do formulário de cadastro */
+    margin: 1px 0; 
 }
 
 .button-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Alinha os botões verticalmente */
+    flex-direction: column;
     height: 100vh;
     background: url('../path/to/your/background-image.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 .action-button {
-    margin: 10px; /* Espaçamento entre os botões */
+    margin: 10px;
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #28a745; /* Cor verde */
+    background-color: #28a745; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -114,7 +112,6 @@ a:hover {
     background-color: #218838;
 }
 
-/* Ajuste para garantir que o conteúdo esteja centralizado */
 .button-container {
     text-align: center;
     display: flex;
@@ -177,3 +174,127 @@ a:hover {
 .btn:hover {
     background-color: #218838;
 }
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    width: 48%;
+}
+
+.profile-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+    font-size: 14px;
+}
+
+.profile-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile-photo-column {
+    width: 30%;
+}
+
+.profile-info-column {
+    width: 35%;
+}
+
+.profile-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-height: 50px;
+    text-align: left;
+}
+
+.profile-box strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-box span {
+    display: block;
+}
+    
+.btn.btn-green {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn.btn-green:hover {
+    background-color: #45a049;
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#profile-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+}
+
+#profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+#profile-details {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-details-row {
+    display: flex;
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+.profile-details-row p,
+.profile-details-row input,
+.profile-details-row textarea {
+    width: 100%;
+}
+
+.profile-details-row p strong {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+

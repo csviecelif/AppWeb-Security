@@ -7,27 +7,15 @@
     <title>Editar Perfil</title>
 </head>
 <body>
-    <div class="form-container">
+    <div class="profile-container">
         <h1>Editar Perfil</h1>
-        <form id="edit-profile-form" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="bio">Breve biografia:</label>
-                <textarea id="bio" name="bio" required></textarea>
+        <div id="profile-wrapper">
+            <img id="profile-photo" src="" alt="Foto do Perfil" style="display:none;">
+            <div id="profile-details">
+                <!-- Os detalhes do perfil serão carregados aqui -->
             </div>
-            <div class="form-group">
-                <label for="photo">Foto:</label>
-                <input id="photo" type="file" name="photo" accept="image/*">
-            </div>
-            <div class="form-group">
-                <label for="cv">CV:</label>
-                <input id="cv" type="file" name="cv" accept=".pdf,.doc,.docx">
-            </div>
-            <div class="form-group">
-                <label for="certificates">Certificados:</label>
-                <input id="certificates" type="file" name="certificates" accept=".pdf,.doc,.docx" multiple>
-            </div>
-            <button type="submit" class="btn btn-green">Salvar</button>
-        </form>
+        </div>
+        <button id="save-profile-button">Salvar Alterações</button>
     </div>
     <script src="editar_perfil.js"></script>
 </body>

@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Meu Perfil</title>
+    <title>Mostrar Perfil</title>
 </head>
 <body>
-    <div class="form-container">
+    <div class="profile-container">
         <h1>Meu Perfil</h1>
-        <div id="profile-details">
-            <!-- Detalhes do perfil do usuário serão preenchidos aqui -->
+        <div id="profile-wrapper">
+            <img id="profile-photo" src="" alt="Foto do Perfil" style="display:none;">
+            <div id="profile-details">
+                <!-- Os detalhes do perfil serão carregados aqui -->
+            </div>
         </div>
-        <a href="editar_perfil.html" class="btn btn-green">Editar Perfil</a>
+        <button id="edit-profile-button">Alterar Dados</button>
     </div>
     <script src="mostrar_perfil.js"></script>
 </body>

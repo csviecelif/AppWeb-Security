@@ -14,8 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $bio = $_POST['bio'];
     $photo = $_FILES['photo'];
     $company_name = $_POST['company_name'];
-    $job_title = $_POST['job_title'];
-    $job_type = $_POST['job_type'];
+    $job_title = $_POST['position']; // Atualizando para capturar o campo correto
     $sector = $_POST['sector'];
     $job_description = $_POST['job_description'];
     $job_requirements = $_POST['job_requirements'];
@@ -25,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $company_website = $_POST['company_website'];
     $company_social = $_POST['company_social'];
     $company_id = $_POST['company_id'];
+    $company_country = $_POST['company_country'];
 
     // Verificar se o diretório uploads existe, caso contrário, criá-lo
     if (!is_dir('uploads')) {
@@ -40,12 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Inserir dados no banco de dados
-    $sql = "INSERT INTO oferecer_emprego (userId, nome_empresa, cargo, tipo_emprego, setor, descricao_vaga, requisitos_vaga, salario, beneficios, endereco_empresa, website_empresa, redes_sociais_empresa, documento_identidade, bio, foto)
+    $sql = "INSERT INTO oferecer_emprego (userId, nome_empresa, cargo, setor, descricao_vaga, requisitos_vaga, salario, beneficios, endereco_empresa, website_empresa, redes_sociais_empresa, documento_identidade, pais_empresa, bio, foto)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     if ($stmt = $con->prepare($sql)) {
-        $stmt->bind_param("issssssssssssss", $userId, $company_name, $job_title, $job_type, $sector, $job_description, $job_requirements, $salary, $benefits, $company_address, $company_website, $company_social, $company_id, $bio, $photo_path);
+        $stmt->bind_param("issssssssssssss", $userId, $company_name, $job_title, $sector, $job_description, $job_requirements, $salary, $benefits, $company_address, $company_website, $company_social, $company_id, $company_country, $bio, $photo_path);
         if ($stmt->execute()) {
-            echo "Cadastro realizado com sucesso!";
+            header('Location: mostrar_perfil.html');
+            exit();
         } else {
             echo "Erro ao realizar cadastro: " . $stmt->error;
         }
