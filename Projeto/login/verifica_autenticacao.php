@@ -12,5 +12,5 @@ if (!isset($_SESSION['userId'])) {
 
 header('Content-Type: application/json');
 echo json_encode($response);
-exit();  // Garante que nenhum outro conteúdo seja enviado
+exit();
 ?>

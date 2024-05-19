@@ -4,7 +4,7 @@ window.addEventListener('pageshow', function (event) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.status === false) { // Corrigido de `data === "False"` para `data.status === false`
+        if (data.status === false) {
             alert('Você deve estar logado para acessar esta página');
             location.href = "../login/index.html";
         } else {

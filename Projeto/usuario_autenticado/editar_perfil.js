@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileDetails = document.getElementById('profile-details');
     const profilePhoto = document.getElementById('profile-photo');
     const saveProfileButton = document.getElementById('save-profile-button');
-    let userData = null; // Declaração da variável userData
+    let userData = null;
 
     fetch('carregar_perfil.php')
         .then(response => {
@@ -13,16 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             if (data.success) {
-                userData = data.data; // Atribuição da variável userData
+                userData = data.data;
                 let profileHtml = '';
-
-                // Definir a foto do perfil
                 if (userData.foto) {
                     profilePhoto.src = userData.foto;
                     profilePhoto.style.display = 'block';
                 }
-
-                // Criação de campos comuns para ambos os tipos de usuário
                 profileHtml += `
                     <div class="profile-details-row"><p><strong>Nome Completo:</strong> ${userData.nomeCompleto || 'Não fornecido'}</p></div>
                     <div class="profile-details-row"><p><strong>Email:</strong> <input type="text" id="email" value="${userData.email || ''}"></p></div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../login/connection.php'; // Certifique-se de que o caminho está correto
+require '../login/connection.php';
 
 if (!isset($_SESSION['userId'])) {
     echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
@@ -9,8 +9,6 @@ if (!isset($_SESSION['userId'])) {
 
 $userId = $_SESSION['userId'];
 $table = $_POST['table'];
-
-// Prepare a atualização dos dados com base na tabela do usuário
 if ($table === 'buscar') {
     $query = "UPDATE buscar_emprego SET 
         email = ?, 
@@ -78,7 +76,6 @@ if ($table === 'buscar') {
 }
 
 if ($stmt->execute()) {
-    // Atualizar a foto se for enviada
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] == UPLOAD_ERR_OK) {
         $fotoPath = 'uploads/' . basename($_FILES['foto']['name']);
         if (move_uploaded_file($_FILES['foto']['tmp_name'], $fotoPath)) {

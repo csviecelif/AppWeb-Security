@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.success) {
                 const userData = data.data;
                 let profileHtml = '';
-
-                // Definir a foto do perfil
                 if (userData.foto) {
                     profilePhoto.src = userData.foto;
                     profilePhoto.style.display = 'block';

@@ -1,14 +1,12 @@
 <?php
 session_start();
 
-require '../login/connection.php'; // Certifique-se de que o caminho está correto
+require '../login/connection.php';
 
 if (!isset($_SESSION['userId'])) {
-    // Redireciona para a página de login se a sessão não estiver ativa
     header('Location: ../login/index.html');
     exit();
 }
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userId = $_SESSION['userId'];
     $bio = $_POST['bio'];
@@ -23,13 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $availability = $_POST['availability'];
     $cv = $_FILES['cv'];
     $certificates = $_FILES['certificates'];
-
-    // Verificar se o diretório uploads existe, caso contrário, criá-lo
     if (!is_dir('uploads')) {
         mkdir('uploads', 0777, true);
     }
-
-    // Renomear e salvar a foto
     $photo_extension = pathinfo($photo['name'], PATHINFO_EXTENSION);
     $photo_path = 'uploads/' . $userId . '-perfil.' . $photo_extension;
     if (!move_uploaded_file($photo['tmp_name'], $photo_path)) {
@@ -37,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    // Renomear e salvar o CV, se fornecido
     $cv_path = null;
     if (!empty($cv['name'])) {
         $cv_extension = pathinfo($cv['name'], PATHINFO_EXTENSION);
@@ -48,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Renomear e salvar os certificados, se fornecidos
     $certificates_paths = [];
     if (!empty($certificates['name'][0])) {
         foreach ($certificates['name'] as $key => $name) {
@@ -63,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $certificates_paths_str = implode(',', $certificates_paths);
 
-    // Inserir dados no banco de dados
     $sql = "INSERT INTO buscar_emprego (userId, experiencia_profissional, habilidades_competencias, formacao_academica, idiomas_falados, tipo_emprego_desejado, area_interesse, expectativa_salarial, disponibilidade_inicio, cv, certificados, bio, foto)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     if ($stmt = $con->prepare($sql)) {

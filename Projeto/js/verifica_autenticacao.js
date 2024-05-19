@@ -19,12 +19,11 @@ window.onload = function() {
     })
     .catch(error => console.error('Erro durante a verificação de autenticação:', error));
 
-    //Botões
     document.getElementById('offer-job').addEventListener('click', function() {
-        window.location.href = '../usuario_autenticado/oferecer_emprego.html'; // Página de redirecionamento para quem oferece emprego
+        window.location.href = '../usuario_autenticado/oferecer_emprego.html'; 
     });
 
     document.getElementById('seek-job').addEventListener('click', function() {
-        window.location.href = '../usuario_autenticado/buscar_emprego.html'; // Página de redirecionamento para quem busca emprego
+        window.location.href = '../usuario_autenticado/buscar_emprego.html';
     });
 };

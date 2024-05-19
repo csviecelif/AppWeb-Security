@@ -1,10 +1,9 @@
 <?php
-use OTPHP\TOTP; //import da biblioteca OTPHP
+use OTPHP\TOTP;
 require '..\vendor\autoload.php';
-require_once '../login/connection.php'; // conexão com o banco de dados
+require_once '../login/connection.php';
 session_start();
 
-// Tempo máximo de sessão em segundos (1 hora)
 define('SESSION_EXPIRATION_TIME', 9000);
 
 function isSessionExpired() {
@@ -17,12 +16,11 @@ function isSessionExpired() {
 }
 
 if (isSessionExpired()) {
-    session_unset(); // Remove todas as variáveis de sessão
-    session_destroy(); // Destroi a sessão
-    header("Location: ../login/index.html"); // Redireciona para a página de login
+    session_unset(); 
+    session_destroy(); 
+    header("Location: ../login/index.html"); 
     exit;
 } else {
-    // Atualiza o timestamp da sessão
     $_SESSION['login_time'] = time();
 }
 $response = array();
@@ -30,8 +28,6 @@ $response = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SESSION['userId'])) {
     $otp = $_POST['OTP'];
     $userId = $_SESSION['userId'];
-
-    // Verifique o OTP com base no userId do usuário
     $stmt = $con->prepare("SELECT twoef FROM usuarios WHERE email = ?");
     $stmt->bind_param("i", $userId);
     $stmt->execute();
@@ -40,8 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SES
     if ($row = $result->fetch_assoc()) {
         $secret = $row['twoef'];
         $totp = TOTP::create($secret);
-        
-        // Verifique o OTP usando a biblioteca OTPHP
         if ($totp->verify($otp)) {
             echo json_encode(['success' => true]);
         } else {

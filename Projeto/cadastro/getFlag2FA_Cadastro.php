@@ -1,14 +1,13 @@
 <?php
 session_start();
 
-require_once '../login/connection.php'; // Conexão com o banco de dados
+require_once '../login/connection.php';
 
 $response = array();
 
 if (isset($_SESSION['userId'])) {
     $userId = $_SESSION['userId'];
 
-    // Verificar a Flag2FA para o usuário
     $query = "SELECT flag2FA FROM usuarios WHERE userId = ?";
     if ($stmt = mysqli_prepare($con, $query)) {
         mysqli_stmt_bind_param($stmt, 's', $userId);
