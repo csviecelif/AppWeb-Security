@@ -3,6 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const profilePhoto = document.getElementById('profile-photo');
     const editProfileButton = document.getElementById('edit-profile-button');
 
+    fetch("../cadastro/verificarsessao.php", {
+        method: "GET",
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === false) {
+            alert('Você deve estar logado para acessar esta página');
+            location.href = "../login/index.html";
+        }
+    })
+    .catch(error => console.error('Erro ao verificar sessão:', error));
+
     fetch('carregar_perfil.php')
         .then(response => {
             if (!response.ok) {

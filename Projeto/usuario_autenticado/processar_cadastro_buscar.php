@@ -4,9 +4,11 @@ session_start();
 require '../login/connection.php';
 
 if (!isset($_SESSION['userId'])) {
+    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
     header('Location: ../login/index.html');
     exit();
 }
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userId = $_SESSION['userId'];
     $bio = $_POST['bio'];

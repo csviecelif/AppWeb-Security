@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const formContainer = document.getElementById('form-container');
+
+    fetch("../cadastro/verificarsessao.php", {
+        method: "GET",
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === false) {
+            alert('Você deve estar logado para acessar esta página');
+            location.href = "../login/index.html";
+        }
+    })
+    .catch(error => console.error('Erro ao verificar sessão:', error));
+    
     formContainer.innerHTML = `
         <form id="seek-job-form" action="../usuario_autenticado/processar_cadastro_buscar.php" method="POST" enctype="multipart/form-data">
             <div class="form-row">

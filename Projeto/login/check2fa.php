@@ -1,6 +1,6 @@
 <?php
 use OTPHP\TOTP;
-require '..\vendor\autoload.php';
+require '../vendor/autoload.php';
 require_once '../login/connection.php';
 session_start();
 
@@ -16,26 +16,29 @@ function isSessionExpired() {
 }
 
 if (isSessionExpired()) {
-    session_unset(); 
-    session_destroy(); 
-    header("Location: ../login/index.html"); 
+    session_unset();
+    session_destroy();
+    header("Location: ../login/index.html");
     exit;
 } else {
     $_SESSION['login_time'] = time();
 }
+
 $response = array();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SESSION['userId'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SESSION['email'])) {
     $otp = $_POST['OTP'];
-    $userId = $_SESSION['userId'];
+    $email = $_SESSION['email'];
+    
     $stmt = $con->prepare("SELECT twoef FROM usuarios WHERE email = ?");
-    $stmt->bind_param("i", $userId);
+    $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
     
     if ($row = $result->fetch_assoc()) {
         $secret = $row['twoef'];
         $totp = TOTP::create($secret);
+        
         if ($totp->verify($otp)) {
             echo json_encode(['success' => true]);
         } else {

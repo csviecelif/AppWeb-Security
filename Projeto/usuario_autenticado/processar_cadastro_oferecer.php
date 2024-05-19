@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-require '../login/connection.php'; // Certifique-se de que o caminho está correto
+require '../login/connection.php';
 
 if (!isset($_SESSION['userId'])) {
-    // Redireciona para a página de login se a sessão não estiver ativa
+    echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
     header('Location: ../login/index.html');
     exit();
 }
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $bio = $_POST['bio'];
     $photo = $_FILES['photo'];
     $company_name = $_POST['company_name'];
-    $job_title = $_POST['position']; // Atualizando para capturar o campo correto
+    $job_title = $_POST['position'];
     $sector = $_POST['sector'];
     $job_description = $_POST['job_description'];
     $job_requirements = $_POST['job_requirements'];
@@ -26,12 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $company_id = $_POST['company_id'];
     $company_country = $_POST['company_country'];
 
-    // Verificar se o diretório uploads existe, caso contrário, criá-lo
+
     if (!is_dir('uploads')) {
         mkdir('uploads', 0777, true);
     }
 
-    // Renomear e salvar a foto
     $photo_extension = pathinfo($photo['name'], PATHINFO_EXTENSION);
     $photo_path = 'uploads/' . $userId . '-perfil.' . $photo_extension;
     if (!move_uploaded_file($photo['tmp_name'], $photo_path)) {
@@ -39,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    // Inserir dados no banco de dados
     $sql = "INSERT INTO oferecer_emprego (userId, nome_empresa, cargo, setor, descricao_vaga, requisitos_vaga, salario, beneficios, endereco_empresa, website_empresa, redes_sociais_empresa, documento_identidade, pais_empresa, bio, foto)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     if ($stmt = $con->prepare($sql)) {

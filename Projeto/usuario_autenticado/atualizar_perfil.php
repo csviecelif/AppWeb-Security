@@ -4,11 +4,13 @@ require '../login/connection.php';
 
 if (!isset($_SESSION['userId'])) {
     echo json_encode(['success' => false, 'message' => 'Usuário não autenticado']);
+    header('Location: ../login/index.html');
     exit();
 }
 
 $userId = $_SESSION['userId'];
 $table = $_POST['table'];
+
 if ($table === 'buscar') {
     $query = "UPDATE buscar_emprego SET 
         email = ?, 

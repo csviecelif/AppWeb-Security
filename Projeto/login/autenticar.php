@@ -1,29 +1,28 @@
 <?php
 session_start();
-require 'connection.php'; 
+require_once 'connection.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'], $_POST['senha'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
-    $senhaHashCliente = $_POST['senha'];
+    $senha = $_POST['senha'];
 
-    $stmt = $con->prepare("SELECT * FROM usuarios WHERE email = ?");
+    $stmt = $con->prepare("SELECT userId, senha FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($row = $result->fetch_assoc()) {
-        if ($senhaHashCliente === $row['senha']) {
-            $_SESSION['userId'] = $email;
-            $_SESSION['login_time'] = time();
-            header("Location: autenticar.html");
-            exit;
-        } else {
-            echo "Senha incorreta!";
-        }
+    $stmt->bind_result($userId, $hashedPassword);
+    
+    if ($stmt->fetch() && hash_equals($hashedPassword, $senha)) {
+        $_SESSION['userId'] = $userId;
+        $_SESSION['email'] = $email;
+        $_SESSION['login_time'] = time();
+        echo json_encode(['success' => true]);
     } else {
-        echo "Usuário não encontrado!";
+        echo json_encode(['success' => false, 'error' => 'E-mail ou senha incorretos!']);
     }
+
     $stmt->close();
     $con->close();
+} else {
+    echo json_encode(['success' => false, 'error' => 'Método de requisição inválido!']);
 }
 ?>
