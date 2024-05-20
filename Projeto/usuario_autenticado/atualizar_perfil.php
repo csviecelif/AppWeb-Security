@@ -13,33 +13,29 @@ $table = $_POST['table'];
 
 if ($table === 'buscar') {
     $query = "UPDATE buscar_emprego SET 
-        email = ?, 
-        telefone = ?, 
-        bio = ?, 
+        experiencia_profissional = ?, 
+        habilidades_competencias = ?, 
         formacao_academica = ?, 
         idiomas_falados = ?, 
         data_nascimento = ?, 
         area_interesse = ?, 
         expectativa_salarial = ?, 
         pais_origem = ?, 
-        experiencia_profissional = ?, 
-        habilidades_competencias = ? 
+        bio = ? 
         WHERE userId = ?";
     
     $stmt = $con->prepare($query);
     $stmt->bind_param(
-        'sssssssssssi', 
-        $_POST['email'], 
-        $_POST['telefone'], 
-        $_POST['bio'], 
+        'sssssssssi', 
+        $_POST['experiencia_profissional'], 
+        $_POST['habilidades_competencias'], 
         $_POST['formacao_academica'], 
         $_POST['idiomas_falados'], 
         $_POST['data_nascimento'], 
         $_POST['area_interesse'], 
         $_POST['expectativa_salarial'], 
         $_POST['pais_origem'], 
-        $_POST['experiencia_profissional'], 
-        $_POST['habilidades_competencias'], 
+        $_POST['bio'], 
         $userId
     );
 } else if ($table === 'oferecer') {
@@ -60,7 +56,7 @@ if ($table === 'buscar') {
     
     $stmt = $con->prepare($query);
     $stmt->bind_param(
-        'ssssssssssssi', 
+        'sssssssssssi', 
         $_POST['cargo'], 
         $_POST['pais_empresa'], 
         $_POST['setor'], 

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Erro ao verificar sessão:', error));
 
     function carregarMensagens() {
-        const listaMensagens = document.getElementById('mensagens');
+        const listaMensagens = document.getElementById('mensagens-lista');
 
         if (!listaMensagens) {
             console.error('Elemento mensagens não encontrado');
@@ -31,15 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(mensagens => {
                 if (mensagens.length > 0) {
                     mensagens.forEach(mensagem => {
-                        const mensagemDiv = document.createElement('div');
-                        mensagemDiv.classList.add('message');
-                        mensagemDiv.innerHTML = `
-                            <h2>De: ${mensagem.remetenteNome}</h2>
-                            <p>${mensagem.mensagem}</p>
-                            <p><strong>Enviado em:</strong> ${new Date(mensagem.data_envio).toLocaleString()}</p>
-                            <button class="contact-button" onclick="mostrarCaixaResposta(${mensagem.remetenteId}, '${mensagem.remetenteNome}', this)">Responder</button>
+                        const mensagemItem = document.createElement('div');
+                        mensagemItem.classList.add('message-item');
+                        mensagemItem.innerHTML = `
+                            <h2>${mensagem.remetenteNome}</h2>
+                            <p>${mensagem.mensagem.slice(0, 50)}...</p>
                         `;
-                        listaMensagens.appendChild(mensagemDiv);
+                        mensagemItem.addEventListener('click', () => abrirMensagemDetalhe(mensagem));
+                        listaMensagens.appendChild(mensagemItem);
                     });
                 } else {
                     listaMensagens.innerHTML = '<p>Nenhuma mensagem na caixa de entrada.</p>';
@@ -48,26 +47,28 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Erro ao buscar mensagens:', error));
     }
 
-    window.mostrarCaixaResposta = function(destinatarioId, nomeCompleto, botao) {
-        const mensagemDiv = botao.parentElement;
-        let replyBox = mensagemDiv.querySelector('.reply-box');
-        
-        if (!replyBox) {
-            replyBox = document.createElement('div');
-            replyBox.classList.add('reply-box');
-            replyBox.innerHTML = `
-                <textarea placeholder="Digite sua resposta aqui..."></textarea>
-                <button class="send-button" onclick="enviarResposta(${destinatarioId}, this)">Enviar mensagem</button>
-            `;
-            mensagemDiv.appendChild(replyBox);
-        } else {
-            replyBox.style.display = 'block';
-        }
+    function abrirMensagemDetalhe(mensagem) {
+        const mensagemDetalhe = document.getElementById('mensagem-detalhe');
+        mensagemDetalhe.innerHTML = `
+            <h2>De: ${mensagem.remetenteNome}</h2>
+            <p>${mensagem.mensagem}</p>
+            <p><strong>Enviado em:</strong> ${new Date(mensagem.data_envio).toLocaleString()}</p>
+            <button class="contact-button" onclick="mostrarCaixaResposta(${mensagem.remetenteId}, '${mensagem.remetenteNome}')">Responder</button>
+            <div id="resposta-container"></div>
+        `;
+    }
+
+    window.mostrarCaixaResposta = function(destinatarioId, nomeCompleto) {
+        const respostaContainer = document.getElementById('resposta-container');
+        respostaContainer.innerHTML = `
+            <textarea class="resposta-textarea" placeholder="Digite sua resposta aqui..."></textarea>
+            <button class="send-button" onclick="enviarResposta(${destinatarioId}, this)">Enviar mensagem</button>
+        `;
     }
 
     window.enviarResposta = function(destinatarioId, botao) {
-        const replyBox = botao.parentElement;
-        const mensagem = replyBox.querySelector('textarea').value;
+        const respostaContainer = botao.parentElement;
+        const mensagem = respostaContainer.querySelector('textarea').value;
 
         if (mensagem.trim() === '') {
             alert('A mensagem não pode estar vazia.');
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.success) {
                 alert('Mensagem enviada com sucesso!');
-                replyBox.style.display = 'none';
+                respostaContainer.innerHTML = '';
             } else {
                 alert('Erro ao enviar mensagem: ' + data.error);
             }
