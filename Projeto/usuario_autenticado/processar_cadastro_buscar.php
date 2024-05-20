@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require '../login/connection.php';
 
 if (!isset($_SESSION['userId'])) {
@@ -21,11 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $interest_area = $_POST['interest_area'];
     $expected_salary = $_POST['expected_salary'];
     $availability = $_POST['availability'];
+    $birthdate = $_POST['birthdate'];
+    $country = $_POST['country'];
     $cv = $_FILES['cv'];
     $certificates = $_FILES['certificates'];
+
     if (!is_dir('uploads')) {
         mkdir('uploads', 0777, true);
     }
+
     $photo_extension = pathinfo($photo['name'], PATHINFO_EXTENSION);
     $photo_path = 'uploads/' . $userId . '-perfil.' . $photo_extension;
     if (!move_uploaded_file($photo['tmp_name'], $photo_path)) {
@@ -57,15 +60,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $certificates_paths_str = implode(',', $certificates_paths);
 
-    $sql = "INSERT INTO buscar_emprego (userId, experiencia_profissional, habilidades_competencias, formacao_academica, idiomas_falados, tipo_emprego_desejado, area_interesse, expectativa_salarial, disponibilidade_inicio, cv, certificados, bio, foto)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO buscar_emprego (
+                userId, experiencia_profissional, habilidades_competencias, 
+                formacao_academica, idiomas_falados, tipo_emprego_desejado, 
+                area_interesse, expectativa_salarial, disponibilidade_inicio, 
+                data_nascimento, pais_origem, cv, certificados, bio, foto
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
     if ($stmt = $con->prepare($sql)) {
-        $stmt->bind_param("issssssssssss", $userId, $experience, $skills, $education, $languages, $job_type, $interest_area, $expected_salary, $availability, $cv_path, $certificates_paths_str, $bio, $photo_path);
+        $stmt->bind_param(
+            "issssssssssssss",
+            $userId, $experience, $skills, $education, $languages, $job_type, 
+            $interest_area, $expected_salary, $availability, $birthdate, 
+            $country, $cv_path, $certificates_paths_str, $bio, $photo_path
+        );
+
         if ($stmt->execute()) {
             echo "Cadastro realizado com sucesso!";
+            header('Location: mostrar_perfil.html');
+            exit();
         } else {
             echo "Erro ao realizar cadastro: " . $stmt->error;
         }
+
         $stmt->close();
     } else {
         echo "Erro ao preparar a consulta: " . $con->error;

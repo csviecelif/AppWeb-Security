@@ -37,6 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         <label for="education">Formação acadêmica:</label>
                         <input id="education" type="text" name="education" placeholder="Formação acadêmica" required>
                     </div>
+                    <div class="form-group">
+                        <label for="job_type">Tipo de emprego desejado:</label>
+                        <input id="job_type" type="text" name="job_type" placeholder="Tipo de emprego desejado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="availability">Disponibilidade:</label>
+                        <input id="availability" type="text" name="availability" placeholder="Disponibilidade" required>
+                    </div>
                 </div>
                 <div class="form-column">
                     <div class="form-group">

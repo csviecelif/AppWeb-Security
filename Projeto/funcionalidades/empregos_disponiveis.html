@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empregos Disponíveis</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="empregos_disponiveis.js" defer></script>
 </head>
-<body>
-    <div id="empregos"></div>
-    <script src="../js/empregos_disponiveis.js"></script>
+<body class="job-page">
+    <div class="page-title-container">
+        <h1 class="page-title">Empregos Disponíveis</h1>
+    </div>
+    <div class="job-container" id="jobList"></div>
+    <div class="button-container">
+        <button class="return-button" onclick="window.location.href='index.html'">Retornar</button>
+    </div>
 </body>
 </html>

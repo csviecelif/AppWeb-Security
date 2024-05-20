@@ -292,9 +292,206 @@ a:hover {
 
 
 
+body.job-page {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1.page-title {
+    text-align: center;
+}
+
+.job-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.job {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    max-width: 400px;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.job h2 {
+    margin-top: 0;
+}
+
+.job p {
+    margin: 5px 0;
+}
+
+.apply-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.apply-button:hover {
+    background-color: #218838;
+}
+
+body.candidates-page, body.job-page {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.page-title-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+h1.page-title {
+    margin: 0;
+}
+
+.candidates-container, .job-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.candidate, .job {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Three columns with spacing */
+    box-sizing: border-box;
+}
+
+.candidate h2, .job h2 {
+    margin-top: 0;
+}
+
+.candidate p .job p {
+    margin: 5px 0;
+}
+
+.contact-button, .apply-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-button:hover, .apply-button:hover {
+    background-color: #0056b3;
+}
 
 
+.messages-container {
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
 
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.message {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
 
+.contact-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
 
+.contact-button:hover {
+    background-color: darkgreen;
+}
+
+.reply-box {
+    margin-top: 10px;
+}
+
+.reply-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.reply-box .send-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.reply-box .send-button:hover {
+    background-color: darkblue;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.return-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.return-button:hover {
+    background-color: #c82333;
+}

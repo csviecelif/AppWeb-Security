@@ -33,6 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['senha'], $_POST['token
         echo "Não foi possível realizar a troca da senha";
     }
     $stmt->close();
-    $conn->close();
+    $con->close();
 }
 ?>

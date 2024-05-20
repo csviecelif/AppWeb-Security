@@ -1,14 +1,19 @@
 <?php
-require '../login/connection.php';
+header('Content-Type: application/json');
+include '../login/connection.php';
 
-$query = "SELECT cargo, pais_empresa, setor FROM oferecer_emprego";
+$query = "SELECT userId, nome_empresa, cargo, pais_empresa, setor, descricao_vaga, requisitos_vaga, salario, beneficios, endereco_empresa, website_empresa, redes_sociais_empresa, foto, criado_em FROM oferecer_emprego";
 $result = $con->query($query);
 
-$empregos = array();
-while ($row = $result->fetch_assoc()) {
-    $empregos[] = $row;
+$empregos = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $empregos[] = $row;
+    }
 }
 
-header('Content-Type: application/json');
 echo json_encode($empregos);
+
+$con->close();
 ?>

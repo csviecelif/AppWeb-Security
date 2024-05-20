@@ -17,6 +17,8 @@ CREATE TABLE usuarios (
     certificados TEXT
 );
 
+UPDATE usuarios SET flag2fa = 0 where userId = 1;
+
 CREATE TABLE buscar_emprego (
     id INT AUTO_INCREMENT PRIMARY KEY,
     userId INT NOT NULL,
@@ -24,7 +26,7 @@ CREATE TABLE buscar_emprego (
     habilidades_competencias TEXT NOT NULL,
     formacao_academica VARCHAR(255) NOT NULL,
     idiomas_falados VARCHAR(255) NOT NULL,
-    data_nascimento DATE NOT NULL,
+    data_nascimento DATE,
     area_interesse VARCHAR(255) NOT NULL,
     expectativa_salarial DECIMAL(10, 2) NOT NULL,
     pais_origem VARCHAR(255) NOT NULL,
@@ -33,8 +35,11 @@ CREATE TABLE buscar_emprego (
     bio TEXT NOT NULL,
     foto VARCHAR(255) NOT NULL,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    tipo_emprego_desejado VARCHAR(255),
+    disponibilidade_inicio VARCHAR(255),
     FOREIGN KEY (userId) REFERENCES usuarios(userId)
 );
+
 
 CREATE TABLE oferecer_emprego (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -57,16 +62,27 @@ CREATE TABLE oferecer_emprego (
     FOREIGN KEY (userId) REFERENCES usuarios(userId)
 );
 
-SELECT * FROM usuarios;
+CREATE TABLE mensagens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    remetenteId INT NOT NULL,
+    destinatarioId INT NOT NULL,
+    mensagem TEXT NOT NULL,
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (remetenteId) REFERENCES usuarios(userId),
+    FOREIGN KEY (destinatarioId) REFERENCES usuarios(userId)
+);
 
-DROP TABLE usuarios;
-
-
+SELECT * FROM mensagens;
 SELECT * FROM usuarios;
 SELECT * FROM buscar_emprego;
 SELECT * FROM oferecer_emprego;
 
+DROP TABLE mensagens;
 DROP TABLE buscar_emprego;
 DROP TABLE oferecer_emprego;
 DROP TABLE usuarios;
+
+DELETE FROM buscar_emprego WHERE id = 2;
+
+
 

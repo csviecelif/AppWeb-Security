@@ -59,7 +59,28 @@ function VerifyOTP() {
             if (data.success) {
                 console.log('Sucesso: OTP válido.');
                 alert('OTP válido!');
-                location.href = "logado.html";
+                console.log('User ID:', data.userId);
+                const userId = data.userId; //check2fa.php
+                fetch('pegar_cadastro.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ userId: userId })
+                })
+                .then(response => response.json())
+                .then(result => {
+                    console.log('Resultado da busca:', result);
+
+                    if (result.oferecerEmprego) {
+                        location.href = "../funcionalidades/candidatos_disponiveis.html";
+                    } else if (result.buscarEmprego) {
+                        location.href = "../funcionalidades/empregos_disponiveis.html";
+                    } else {
+                        location.href = "logado.html";
+                    }
+                })
+                .catch(error => console.error('Erro ao buscar cadastro:', error));
             } else {
                 console.log('Falha: ' + data.error);
                 alert('OTP inválido!');
@@ -67,6 +88,8 @@ function VerifyOTP() {
         })
         .catch(error => console.error(error.message));
 }
+
+
 
 function get2FACode() {
     fetch('../cadastro/get2FACode.php')

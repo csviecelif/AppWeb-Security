@@ -1,7 +1,7 @@
 <?php
 use OTPHP\TOTP;
 require '../vendor/autoload.php';
-require_once '../login/connection.php';
+require_once 'connection.php';
 session_start();
 
 define('SESSION_EXPIRATION_TIME', 9000);
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SES
     $otp = $_POST['OTP'];
     $email = $_SESSION['email'];
     
-    $stmt = $con->prepare("SELECT twoef FROM usuarios WHERE email = ?");
+    $stmt = $con->prepare("SELECT userId, twoef FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -40,7 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SES
         $totp = TOTP::create($secret);
         
         if ($totp->verify($otp)) {
-            echo json_encode(['success' => true]);
+            $_SESSION['userId'] = $row['userId'];
+            echo json_encode(['success' => true, 'userId' => $row['userId']]);
         } else {
             echo json_encode(['success' => false, 'error' => 'OTP inválido!']);
         }

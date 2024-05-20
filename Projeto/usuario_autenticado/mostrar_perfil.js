@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileDetails = document.getElementById('profile-details');
     const profilePhoto = document.getElementById('profile-photo');
     const editProfileButton = document.getElementById('edit-profile-button');
+    const visitSiteButton = document.getElementById('visit-site-button');
 
     fetch("../cadastro/verificarsessao.php", {
         method: "GET",
@@ -76,5 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     editProfileButton.addEventListener('click', function() {
         window.location.href = 'editar_perfil.html';
+    });
+
+    visitSiteButton.addEventListener('click', function() {
+        window.location.href = '../funcionalidades/index.html';
     });
 });
