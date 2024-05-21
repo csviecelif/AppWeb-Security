@@ -32,12 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     profilePhoto.style.display = 'block';
                 }
 
+                profileHtml += `
+                    <div class="profile-details-row"><p><strong>Nome Completo:</strong> ${userData.nomeCompleto || 'Não fornecido'}</p></div>
+                    <div class="profile-details-row"><p><strong>Email:</strong> ${userData.email || 'Não fornecido'}</p></div>
+                `;
+
                 if (userData.table === 'buscar') {
-                    profileHtml = `
-                        <div class="profile-details-row"><p><strong>Nome Completo:</strong> ${userData.nomeCompleto || 'Não fornecido'}</p></div>
-                        <div class="profile-details-row"><p><strong>Email:</strong> ${userData.email || 'Não fornecido'}</p></div>
+                    profileHtml += `
                         <div class="profile-details-row"><p><strong>Telefone:</strong> ${userData.telefone || 'Não fornecido'}</p></div>
-                        <div class="profile-details-row"><p><strong>Biografia:</strong> ${userData.bio || 'Não fornecido'}</p></div>
                         <div class="profile-details-row"><p><strong>Formação Acadêmica:</strong> ${userData.formacao_academica || 'Não fornecido'}</p></div>
                         <div class="profile-details-row"><p><strong>Idiomas Falados:</strong> ${userData.idiomas_falados || 'Não fornecido'}</p></div>
                         <div class="profile-details-row"><p><strong>Data de Nascimento:</strong> ${userData.data_nascimento || 'Não fornecido'}</p></div>
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="profile-details-row"><p><strong>Habilidades e Competências:</strong> ${userData.habilidades_competencias || 'Não fornecido'}</p></div>
                     `;
                 } else if (userData.table === 'oferecer') {
-                    profileHtml = `
+                    profileHtml += `
                         <div class="profile-details-row"><p><strong>Nome da Empresa:</strong> ${userData.nome_empresa || 'Não fornecido'}</p></div>
                         <div class="profile-details-row"><p><strong>Cargo:</strong> ${userData.cargo || 'Não fornecido'}</p></div>
                         <div class="profile-details-row"><p><strong>País da Empresa:</strong> ${userData.pais_empresa || 'Não fornecido'}</p></div>
@@ -61,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="profile-details-row"><p><strong>Website da Empresa:</strong> ${userData.website_empresa || 'Não fornecido'}</p></div>
                         <div class="profile-details-row"><p><strong>Redes Sociais da Empresa:</strong> ${userData.redes_sociais_empresa || 'Não fornecido'}</p></div>
                         <div class="profile-details-row"><p><strong>Documento de Identidade:</strong> ${userData.documento_identidade || 'Não fornecido'}</p></div>
-                        <div class="profile-details-row"><p><strong>Biografia:</strong> ${userData.bio || 'Não fornecido'}</p></div>
                     `;
                 }
 

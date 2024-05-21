@@ -26,7 +26,7 @@ if ($table === 'buscar') {
     
     $stmt = $con->prepare($query);
     $stmt->bind_param(
-        'sssssssssi', 
+        'ssssssssi', 
         $_POST['experiencia_profissional'], 
         $_POST['habilidades_competencias'], 
         $_POST['formacao_academica'], 
@@ -56,7 +56,7 @@ if ($table === 'buscar') {
     
     $stmt = $con->prepare($query);
     $stmt->bind_param(
-        'sssssssssssi', 
+        'ssssssssssssi', 
         $_POST['cargo'], 
         $_POST['pais_empresa'], 
         $_POST['setor'], 
