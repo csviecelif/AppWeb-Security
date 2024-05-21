@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Recuperação de Senha</title>
     <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="recuperar_senha.js" defer></script>
 </head>
 <body>
     <div class="container recuperar-senha-container">
         <h2>Recuperar Senha</h2>
-        <form action="enviar_email.php" method="post">
+        <form id="recuperarSenhaForm">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
             <input type="submit" value="Enviar Link de Recuperação">

@@ -538,6 +538,23 @@ h1.page-title {
     box-sizing: border-box;
 }
 
+button[type="submit"], .esqueci-senha {
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+button[type="submit"]:hover, .esqueci-senha:hover {
+    background-color: #45a049;
+}
+
 
 .reply-box .send-button {
     background-color: #28a745;

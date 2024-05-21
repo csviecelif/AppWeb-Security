@@ -89,10 +89,20 @@ function VerifyOTP() {
         .catch(error => console.error(error.message));
 }
 
+function gerarQRCode(secret) {
+    const label = encodeURIComponent('GlobalOpportuna'); 
+    const issuer = encodeURIComponent('GlobalOpportuna'); 
+    const tag = `otpauth://totp/${label}?secret=${secret}&issuer=${issuer}`;
+    const qrCodeUri = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(tag) + '&size=200x200&ecc=M';
+    
+    const qrCodeContainer = document.getElementById('qrCodeContainer');
+    qrCodeContainer.innerHTML = '<img src="' + qrCodeUri + '" alt="QRCode do 2FA">';
+}
+
 
 
 function get2FACode() {
-    fetch('../cadastro/get2FACode.php')
+    fetch('get2FACode.php')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro na solicitação. Código de status: ' + response.status);
@@ -102,6 +112,7 @@ function get2FACode() {
         .then(data => gerarQRCode(data.secret))
         .catch(error => console.error);
 }
+
 
 function Ativar2FA() {
     const userInput = document.getElementById('form').elements['OTP'].value;

@@ -1,38 +1,32 @@
 <?php
 require '../login/connection.php';
-require __DIR__ . '/../vendor/autoload.php';
-use OTPHP\TOTP;
+header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['senha'], $_POST['token'])) {
-    $novaSenha = $_POST['senha'];
-    $novotoken = $_POST['token'];
-    $stmt = $con->prepare("SELECT email FROM usuarios WHERE token = ?");
-    $stmt->bind_param("s", $novotoken);
+$data = json_decode(file_get_contents('php://input'), true);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($data['token']) && isset($data['senha'])) {
+    $token = $data['token'];
+    $novaSenha = $data['senha'];
+
+    $stmt = $con->prepare("SELECT userId FROM usuarios WHERE token = ?");
+    $stmt->bind_param("s", $token);
     $stmt->execute();
     $result = $stmt->get_result();
-    if ($row = $result->fetch_assoc()) {
-        $email = $row['email'];
-        $otp = TOTP::create();
-        $novotwoef = $otp->getSecret();
-        $novaflag = 0;
 
-        $stmt = $con->prepare("UPDATE usuarios SET senha = ?, twoef = ?, flag2fa = ? WHERE email = ?");
-        $stmt->bind_param("ssss", $novaSenha, $novotwoef, $novaflag, $email);
-        
-        $stmt->execute();
-
-        if ($stmt->affected_rows > 0) {
-            echo "Senha atualizada com sucesso!";
-            header("Location: ../login/logado.html");
+    if ($result->num_rows > 0) {
+        $stmt = $con->prepare("UPDATE usuarios SET senha = ?, token = '' WHERE token = ?");
+        $stmt->bind_param("ss", $novaSenha, $token);
+        if ($stmt->execute()) {
+            echo json_encode(['success' => true, 'message' => 'Senha redefinida com sucesso!']);
         } else {
-            echo "Erro ao atualizar senha.";
+            echo json_encode(['success' => false, 'message' => 'Erro ao atualizar a senha: ' . $stmt->error]);
         }
-        exit;
-    } 
-    else {
-        echo "Não foi possível realizar a troca da senha";
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Token inválido']);
     }
     $stmt->close();
     $con->close();
+} else {
+    echo json_encode(['success' => false, 'message' => 'Dados incompletos']);
 }
 ?>
