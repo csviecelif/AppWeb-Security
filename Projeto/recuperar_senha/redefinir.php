@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($data['token']) && isset($data
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $stmt = $con->prepare("UPDATE usuarios SET senha = ?, token = '' WHERE token = ?");
+        $stmt = $con->prepare("UPDATE usuarios SET senha = ?, token = '', email_validado = 1 WHERE token = ?");
         $stmt->bind_param("ss", $novaSenha, $token);
         if ($stmt->execute()) {
             echo json_encode(['success' => true, 'message' => 'Senha redefinida com sucesso!']);

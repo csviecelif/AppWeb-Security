@@ -15,6 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
+        $sql_update = "UPDATE usuarios SET email_validado = 1 WHERE email = ?";
+        $stmt_update = $con->prepare($sql_update);
+        $stmt_update->bind_param("s", $email);
+        $stmt_update->execute();
+
         header("Location: 2fa.html");
         exit;
     } else {
