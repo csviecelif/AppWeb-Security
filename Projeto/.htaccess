@@ -1,0 +1,14 @@
+# Bloqueia a listagem de diretórios
+Options -Indexes
+
+# Permite o acesso a todos os arquivos dentro do diretório
+<Files "*">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Bloqueia o acesso direto aos arquivos .htaccess e .htpasswd
+<Files ~ "^\.ht">
+    Order allow,deny
+    Deny from all
+</Files>
