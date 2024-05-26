@@ -1,6 +1,12 @@
 <?php
+require '../vendor/autoload.php';
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(dirname(__DIR__) . '/Login');
+$dotenv->load();
+
 use OTPHP\TOTP;
-require '..\vendor\autoload.php';
+require '../vendor/autoload.php';
 require_once '../login/connection.php';
 session_start();
 define('SESSION_EXPIRATION_TIME', 9000);

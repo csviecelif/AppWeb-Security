@@ -5,6 +5,9 @@ require __DIR__ . '/../vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . '/Login');
+$dotenv->load();
+
 define('SESSION_EXPIRATION_TIME', 9000);
 
 function isSessionExpired() {
@@ -107,8 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->SMTPSecure = 'ssl';
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 465;
-            $mail->Username = 'globaloportuna@gmail.com';
-            $mail->Password = 'qgvm brod pjrl wflz';
+            $mail->Host = $_ENV['SMTP_HOST'];
+            $mail->Port = $_ENV['SMTP_PORT'];
+            $mail->Username = $_ENV['SMTP_USER'];
+            $mail->Password = $_ENV['SMTP_PASS'];
             $mail->setFrom('globaloportuna@gmail.com', 'Global Oportuna');
             $mail->addAddress($email, '');
             $mail->isHTML(true);
