@@ -13,7 +13,7 @@ window.onload = function() {
     })
     .then(data => {
         if (!data.status) {
-            alert('Você deve estar logado para acessar esta página. ' + data.message);
+            //alert('Você deve estar logado para acessar esta página. ' + data.message);
             window.location.href = '../login/index.html';
         }
     })

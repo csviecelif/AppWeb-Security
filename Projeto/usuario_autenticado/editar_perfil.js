@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
         if (data.status === false) {
-            alert('Você deve estar logado para acessar esta página');
+            //alert('Você deve estar logado para acessar esta página');
             location.href = "../login/index.html";
         }
     })
