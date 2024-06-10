@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <title>Cadastro de Usuário</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="../js/sha256.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.0.0/jsencrypt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
     <script src="../js/validacao.js"></script>
+    <script src="../js/cadastro.js" defer></script>
     <link rel="stylesheet" href="../css/styles.css"/>
 </head>
 <body>
     <div class="container cadastro-container">
         <h2>Cadastro de Usuário</h2>
-        <form action="confirmar_email.php" method="post" onsubmit="return validarFormularioCadastro()">
+        <form id="cadastroForm" onsubmit="return validarFormularioCadastro()">
             <label for="nomeCompleto">Nome Completo:</label>
             <input type="text" id="nomeCompleto" name="nomeCompleto" required><br><br>
 

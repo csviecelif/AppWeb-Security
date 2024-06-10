@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../login/connection.php';
 define('SESSION_EXPIRATION_TIME', 9000);
 
 function isSessionExpired() {
@@ -11,30 +12,32 @@ function isSessionExpired() {
     return false;
 }
 
-if (isSessionExpired()) {
-    session_unset();
-    session_destroy();
-    header("Location: ../login/index.html");
-    exit;
-} else {
-    $_SESSION['login_time'] = time();
-}
 
-require_once '../login/connection.php';
+$response = array();
 
 if (isset($_SESSION['userId'])) {
     $userId = $_SESSION['userId'];
-    $query = "SELECT twoef FROM usuarios WHERE userId = $userId";
-    $result = mysqli_query($con, $query);
 
-    if ($result) {
-        $row = mysqli_fetch_assoc($result);
-        $secret = $row['twoef'];
-        echo json_encode(array('secret' => $secret));
+    $query = "SELECT twoef FROM usuarios WHERE userId = ?";
+    if ($stmt = $con->prepare($query)) {
+        $stmt->bind_param("i", $userId);
+        $stmt->execute();
+        $stmt->bind_result($secret);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($secret) {
+            $response['secret'] = $secret;
+        } else {
+            $response['error'] = 'Erro ao obter o código 2FA do banco de dados.';
+        }
     } else {
-        echo json_encode(array('error' => 'Erro ao consultar o 2FACode no banco de dados.'));
+        $response['error'] = 'Erro na preparação da consulta: ' . $con->error;
     }
 } else {
-    echo json_encode(array('error' => 'Nenhuma sessão ativa.'));
+    $response['error'] = 'Nenhuma sessão ativa.';
 }
+
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>

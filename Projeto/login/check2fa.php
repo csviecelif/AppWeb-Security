@@ -1,57 +1,55 @@
 <?php
-use OTPHP\TOTP;
-require '../vendor/autoload.php';
-require_once 'connection.php';
 session_start();
+require_once '../vendor/autoload.php'; // Certifique-se de que o autoload está no caminho correto
+use OTPHP\TOTP;
+require_once '../login/connection.php';
 
-define('SESSION_EXPIRATION_TIME', 9000);
+$dados = json_decode(file_get_contents('php://input'), true);
 
-function isSessionExpired() {
-    if (isset($_SESSION['login_time'])) {
-        if (time() - $_SESSION['login_time'] > SESSION_EXPIRATION_TIME) {
-            return true;
-        }
-    }
-    return false;
+if (!$dados || !isset($dados['OTP'])) {
+    echo json_encode(['error' => 'Dados criptografados não recebidos corretamente.']);
+    exit();
 }
 
-if (isSessionExpired()) {
-    session_unset();
-    session_destroy();
-    header("Location: ../login/index.html");
-    exit;
+$encryptedOTP = $dados['OTP'];
+
+$privateKeyPath = realpath(__DIR__ . '/../cert/private.key');
+if (!file_exists($privateKeyPath)) {
+    echo json_encode(['error' => 'Arquivo de chave privada não encontrado.']);
+    exit();
+}
+
+$privateKey = openssl_pkey_get_private('file://' . $privateKeyPath);
+if (!$privateKey) {
+    echo json_encode(['error' => 'Falha ao carregar a chave privada: ' . openssl_error_string()]);
+    exit();
+}
+
+$success = openssl_private_decrypt(base64_decode($encryptedOTP), $decryptedOTP, $privateKey);
+if (!$success) {
+    echo json_encode(['error' => 'Falha ao descriptografar o OTP: ' . openssl_error_string()]);
+    exit();
+}
+
+$sql = "SELECT twoef FROM usuarios WHERE userId = ?";
+$stmt = $con->prepare($sql);
+$stmt->bind_param("i", $_SESSION['userId']);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+
+if (!$user) {
+    echo json_encode(['error' => 'Usuário não encontrado.']);
+    exit();
+}
+
+$otp = TOTP::createFromSecret($user['twoef']);
+if ($otp->verify($decryptedOTP)) {
+    echo json_encode(['success' => true, 'userId' => $_SESSION['userId']]);
 } else {
-    $_SESSION['login_time'] = time();
+    echo json_encode(['error' => 'OTP inválido.']);
 }
 
-$response = array();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['OTP']) && isset($_SESSION['email'])) {
-    $otp = $_POST['OTP'];
-    $email = $_SESSION['email'];
-    
-    $stmt = $con->prepare("SELECT userId, twoef FROM usuarios WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    if ($row = $result->fetch_assoc()) {
-        $secret = $row['twoef'];
-        $totp = TOTP::create($secret);
-        
-        if ($totp->verify($otp)) {
-            $_SESSION['userId'] = $row['userId'];
-            echo json_encode(['success' => true, 'userId' => $row['userId']]);
-        } else {
-            echo json_encode(['success' => false, 'error' => 'OTP inválido!']);
-        }
-    } else {
-        echo json_encode(['success' => false, 'error' => 'Usuário não encontrado!']);
-    }
-    
-    $stmt->close();
-    $con->close();
-} else {
-    echo json_encode(['success' => false, 'error' => 'Método de requisição inválido ou OTP não fornecido!']);
-}
+$stmt->close();
+$con->close();
 ?>

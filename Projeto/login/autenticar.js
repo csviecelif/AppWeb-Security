@@ -1,4 +1,3 @@
-
 window.addEventListener('pageshow', function (event) {
     fetch('../cadastro/getFlag2FA.php')
         .then(response => {
@@ -40,14 +39,39 @@ window.addEventListener('pageshow', function (event) {
         });
 });
 
+async function getCertificate() {
+    const response = await fetch('../cert/enviar_certificado.php');
+    const cert = await response.text();
+    return cert;
+}
+
+function extractPublicKey(cert) {
+    const certificate = forge.pki.certificateFromPem(cert);
+    const publicKey = forge.pki.publicKeyToPem(certificate.publicKey);
+    return publicKey;
+}
+
+function encryptSecretKey(secretKey, publicKey) {
+    const encrypt = new JSEncrypt();
+    encrypt.setPublicKey(publicKey);
+    return encrypt.encrypt(secretKey);
+}
+
 function VerifyOTP() {
     const userInput = document.getElementById('form').elements['OTP'].value;
-    fetch('check2fa.php', {
+
+    getCertificate().then(cert => {
+        const publicKey = extractPublicKey(cert);
+        const encryptedOTP = encryptSecretKey(userInput, publicKey);
+
+        fetch('check2fa.php', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
             },
-            body: 'OTP=' + encodeURIComponent(userInput)
+            body: JSON.stringify({
+                OTP: encryptedOTP
+            })
         })
         .then(response => {
             if (!response.ok) {
@@ -59,8 +83,7 @@ function VerifyOTP() {
             if (data.success) {
                 console.log('Sucesso: OTP válido.');
                 alert('OTP válido!');
-                console.log('User ID:', data.userId);
-                const userId = data.userId; //check2fa.php
+                const userId = data.userId;
                 fetch('pegar_cadastro.php', {
                     method: 'POST',
                     headers: {
@@ -72,10 +95,10 @@ function VerifyOTP() {
                 .then(result => {
                     console.log('Resultado da busca:', result);
 
-                    if (result.oferecerEmprego) {
-                        location.href = "../funcionalidades/candidatos_disponiveis.html";
-                    } else if (result.buscarEmprego) {
+                    if (result.buscarEmprego) {
                         location.href = "../funcionalidades/empregos_disponiveis.html";
+                    } else if (result.oferecerEmprego) {
+                        location.href = "../funcionalidades/candidatos_disponiveis.html";
                     } else {
                         location.href = "logado.html";
                     }
@@ -87,6 +110,7 @@ function VerifyOTP() {
             }
         })
         .catch(error => console.error(error.message));
+    });
 }
 
 function gerarQRCode(secret) {
@@ -99,8 +123,6 @@ function gerarQRCode(secret) {
     qrCodeContainer.innerHTML = '<img src="' + qrCodeUri + '" alt="QRCode do 2FA">';
 }
 
-
-
 function get2FACode() {
     fetch('get2FACode.php')
         .then(response => {
@@ -110,18 +132,24 @@ function get2FACode() {
             return response.json();
         })
         .then(data => gerarQRCode(data.secret))
-        .catch(error => console.error);
+        .catch(error => console.error(error.message));
 }
-
 
 function Ativar2FA() {
     const userInput = document.getElementById('form').elements['OTP'].value;
-    fetch('../cadastro/Ativar2FA.php', {
+
+    getCertificate().then(cert => {
+        const publicKey = extractPublicKey(cert);
+        const encryptedOTP = encryptSecretKey(userInput, publicKey);
+
+        fetch('../cadastro/Ativar2FA.php', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
             },
-            body: 'OTP=' + encodeURIComponent(userInput)
+            body: JSON.stringify({
+                OTP: encryptedOTP
+            })
         })
         .then(response => {
             if (!response.ok) {
@@ -140,4 +168,5 @@ function Ativar2FA() {
             }
         })
         .catch(error => console.error(error.message));
+    });
 }

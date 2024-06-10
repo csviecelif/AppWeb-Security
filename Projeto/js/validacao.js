@@ -41,10 +41,6 @@ function validarFormularioCadastro() {
         return false;
     }
 
-    if (senha == confirmarSenha) {
-        var senha = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
-    }
-
     if (!validarCPF(cpf)) {
         alert('Por favor, informe um CPF válido no formato 999.999.999-99.');
         return false;

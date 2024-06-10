@@ -5,12 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
         if (data.status === false) {
-            //alert('Você deve estar logado para acessar esta página');
             location.href = "../login/index.html";
         }
     })
     .catch(error => console.error('Erro ao verificar sessão:', error));
-    
+
     const listaCandidatos = document.getElementById('candidatos');
 
     if (!listaCandidatos) {
@@ -69,7 +68,7 @@ function mostrarCaixaResposta(destinatarioId, nomeCompleto, botao) {
     }
 }
 
-function enviarResposta(destinatarioId, botao) {
+async function enviarResposta(destinatarioId, botao) {
     const replyBox = botao.parentElement;
     const mensagem = replyBox.querySelector('textarea').value;
 
@@ -78,21 +77,59 @@ function enviarResposta(destinatarioId, botao) {
         return;
     }
 
-    fetch('enviar_mensagem.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ destinatarioId: destinatarioId, mensagem: mensagem })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
+    try {
+        const response = await fetch('../cert/enviar_certificado.php');
+        if (!response.ok) {
+            throw new Error('Erro ao carregar o certificado');
+        }
+        const certText = await response.text();
+        const publicKey = extractPublicKey(certText);
+
+        const encrypt = new JSEncrypt();
+        encrypt.setPublicKey(publicKey);
+        const secretKey = generateSecretKey();
+        console.log('Chave secreta gerada: ', secretKey);
+        const encryptedSecretKey = encrypt.encrypt(secretKey);
+        console.log('Chave secreta criptografada: ', encryptedSecretKey);
+
+        // Geração do IV
+        const iv = CryptoJS.lib.WordArray.random(16).toString(CryptoJS.enc.Hex);
+        const encryptedMessage = CryptoJS.AES.encrypt(mensagem, CryptoJS.enc.Hex.parse(secretKey), { iv: CryptoJS.enc.Hex.parse(iv) }).toString();
+        console.log('Mensagem criptografada: ', encryptedMessage);
+
+        const encryptedData = {
+            destinatarioId: destinatarioId,
+            data: encryptedSecretKey,
+            iv: iv,
+            mensagem: encryptedMessage
+        };
+
+        const enviarResponse = await fetch('enviar_mensagem.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(encryptedData)
+        });
+        const result = await enviarResponse.json();
+
+        if (result.success) {
             alert('Mensagem enviada com sucesso!');
             replyBox.style.display = 'none';
         } else {
-            alert('Erro ao enviar mensagem: ' + data.error);
+            alert('Erro ao enviar mensagem: ' + result.error);
         }
-    })
-    .catch(error => console.error('Erro ao enviar mensagem:', error));
+    } catch (error) {
+        console.error('Erro ao enviar mensagem:', error);
+    }
+}
+
+function extractPublicKey(cert) {
+    const certificate = forge.pki.certificateFromPem(cert);
+    const publicKey = forge.pki.publicKeyToPem(certificate.publicKey);
+    return publicKey;
+}
+
+function generateSecretKey() {
+    return CryptoJS.lib.WordArray.random(32).toString(CryptoJS.enc.Hex);
 }

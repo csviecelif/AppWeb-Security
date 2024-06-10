@@ -2,32 +2,32 @@
 session_start();
 require_once '../login/connection.php';
 
-$response = array();
-
-if (isset($_SESSION['email'])) {
-    $email = $_SESSION['email'];
-
-    $query = "SELECT flag2FA FROM usuarios WHERE email = ?";
-    if ($stmt = mysqli_prepare($con, $query)) {
-        mysqli_stmt_bind_param($stmt, 's', $email);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_bind_result($stmt, $flag2FA);
-        
-        if (mysqli_stmt_fetch($stmt)) {
-            $response['flag2FA'] = (int)$flag2FA;
-        } else {
-            $response['error'] = 'Erro ao consultar a Flag2FA no banco de dados.';
-        }
-        
-        mysqli_stmt_close($stmt);
-    } else {
-        $response['error'] = 'Erro na preparação da consulta: ' . mysqli_error($con);
-    }
-} else {
-    $response['error'] = 'E-mail não encontrado na sessão.';
+// Verificar se o ID do usuário está na sessão
+if (!isset($_SESSION['userId'])) {
+    echo json_encode(['error' => 'Usuário não autenticado.']);
+    exit();
 }
 
-mysqli_close($con);
+$userId = $_SESSION['userId'];
 
-echo json_encode($response);
+// Consultar a Flag2FA no banco de dados
+$query = "SELECT flag2FA FROM usuarios WHERE userId = ?";
+$stmt = $con->prepare($query);
+if (!$stmt) {
+    echo json_encode(['error' => 'Falha ao preparar a consulta: ' . $con->error]);
+    exit();
+}
+$stmt->bind_param('i', $userId);
+$stmt->execute();
+$stmt->bind_result($flag2FA);
+$stmt->fetch();
+
+if ($flag2FA !== null) {
+    echo json_encode(['flag2FA' => (int)$flag2FA]);
+} else {
+    echo json_encode(['error' => 'Flag2FA não encontrada.']);
+}
+
+$stmt->close();
+$con->close();
 ?>

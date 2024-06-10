@@ -1,6 +1,4 @@
 CREATE DATABASE normal;
-DROP DATABASE normal;
-
 USE normal;
 CREATE TABLE usuarios (
     userId INT AUTO_INCREMENT PRIMARY KEY,

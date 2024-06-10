@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>Autenticação de Usuário</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="../js/validacao.js"></script>
-    <script defer src="../js/Login2FA.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.0.0/jsencrypt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
+    <script defer src="../js/login.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <div id="container" class="container">
         <div class="divisao">
             <div id="box" class="box-login">
-                <form id="loginForm" onsubmit="return hashSenhaSubmit();">
+                <form id="loginForm">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     <label for="senha">Senha:</label>
@@ -24,14 +25,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function hashSenhaSubmit() {
-            var senha = document.getElementById('senha').value;
-            var senhaHash = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
-            document.getElementById('senha').value = senhaHash;
-            return true;
-        }
-    </script>
 </body>
 </html>
