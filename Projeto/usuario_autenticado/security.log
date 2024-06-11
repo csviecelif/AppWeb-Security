@@ -1,0 +1,9 @@
+2024-06-11 05:06:13 - Dados Recebidos: {"iv":"add94b4b046580aa128be2420acfd035","secretKey":"dmZBobO/TOtsWLYREmb4SPaZqYxT9oBbN3oF58QYyKHQMY243pZFd9v0oNlVIIR/cQGEiWyZEMkrF0xgEIWBW5E4p0vAG9WOQ5IRUIMm7Hc6a0f7GIAOY0/4uidii0NNp+AN+Q0jVltofJJvJ4ZIKqundNyHZnTCya+y9OgxUr5QEdWryt7p4ElzIHSuqHyFioyqT2nqp1RtcWhj5qCmtbbN/Hqr89aIN0+ThF3BY4tk+zoXevc484HMg6vn7uNCYgIE5csA+g9DFVQctOUDCpl9ucxKkKcndkedCxRBaqSAL45dv/7ozzMPQerQnPwMGvJ3tPrNq5Utl7xK7Z0mNw==","mensagem":"xNr1zU4iJg1GVLKSF2+CVqEPIipOLFzh40eBElQndhNekd8u9xcoImhWedkdl+QzFASU9aSBDfOVsrWFrRJ8hYpUbl39gnPSM97Wop64tnrp1HtTEWqKD0tVcpv5QuXoaC5lywDmXV/z1V806TrgONcWxYe0dwizjPs20chXqjIkmRGyFhKtsOKXZ4dhdSCM3Vz1UFPlPLhcieQ/WzWbglrWW3B07SdE4WSKKt/ORYP9NbBh63nMODDQ74azrorwtvzXxO5bGtuSA7QfiupvN8z6FzXpDnpe9dRRtCeszRACE2cR61TVUfZD2yRbdAG22gLUhN6Jel7w+Hu25K+L4ruD24dnF7Oh1P2M/HzYaUsmN6dUm93qLJGvP/Y3z9KG"}
+2024-06-11 05:06:13 - Chave Secreta Descriptografada: 6333245cc33e48c96de43469735aa4beab8b20979b6c3a42e5069ec1d50ec111
+2024-06-11 05:06:13 - Mensagem Descriptografada: {"bio":"dasdsada","photo":{},"experience":"dasdsa","skills":"dasdas","education":"dasdsa","job_type":"dasdsa","availability":"dsadas","languages":"dasdas","birthdate":"1222-12-14","country":"dasdas","interest_area":"dasdsa","expected_salary":"22222","cv":{},"certificates":{}}
+2024-06-11 05:06:13 - Erro ao fazer upload da foto.
+2024-06-11 05:07:54 - Dados Recebidos: 
+2024-06-11 05:07:54 - Dados criptografados não recebidos corretamente.
+2024-06-11 05:09:12 - Chave Secreta Descriptografada: a608c80cd47548948003fc0375a9e647bf18015a768172e7d1654193b278b55d
+2024-06-11 05:09:12 - Mensagem Descriptografada: {"bio":"dasdsadsa","experience":"dasdasdasd","skills":"dasdasd","education":"dasdsadsa","job_type":"dasdsadsa","availability":"dasdsadsa","languages":"dasdsada","birthdate":"1222-12-14","country":"dasdsa","interest_area":"dsadsadsa","expected_salary":"22222"}
+2024-06-11 05:09:12 - Cadastro realizado com sucesso para o usuário 1.

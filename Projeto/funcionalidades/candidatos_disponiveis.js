@@ -78,51 +78,72 @@ async function enviarResposta(destinatarioId, botao) {
     }
 
     try {
-        const response = await fetch('../cert/enviar_certificado.php');
-        if (!response.ok) {
-            throw new Error('Erro ao carregar o certificado');
-        }
-        const certText = await response.text();
-        const publicKey = extractPublicKey(certText);
+        const publicKey = await getPublicKeyFromServer();
+        console.log('Chave Pública:', publicKey); // Adicionando log para verificar a chave pública
 
-        const encrypt = new JSEncrypt();
-        encrypt.setPublicKey(publicKey);
-        const secretKey = generateSecretKey();
-        console.log('Chave secreta gerada: ', secretKey);
-        const encryptedSecretKey = encrypt.encrypt(secretKey);
-        console.log('Chave secreta criptografada: ', encryptedSecretKey);
+        const encryptedData = encryptMessage(mensagem, publicKey);
+        console.log('Dados Criptografados:', encryptedData); // Adicionando log para verificar os dados criptografados
 
-        // Geração do IV
-        const iv = CryptoJS.lib.WordArray.random(16).toString(CryptoJS.enc.Hex);
-        const encryptedMessage = CryptoJS.AES.encrypt(mensagem, CryptoJS.enc.Hex.parse(secretKey), { iv: CryptoJS.enc.Hex.parse(iv) }).toString();
-        console.log('Mensagem criptografada: ', encryptedMessage);
-
-        const encryptedData = {
+        const payload = {
             destinatarioId: destinatarioId,
-            data: encryptedSecretKey,
-            iv: iv,
-            mensagem: encryptedMessage
+            data: encryptedData.data,
+            iv: encryptedData.iv,
+            mensagem: encryptedData.mensagem
         };
 
-        const enviarResponse = await fetch('enviar_mensagem.php', {
+        console.log('Payload Enviado:', payload); // Adicionando log para verificar o payload enviado
+
+        const response = await fetch('enviar_mensagem.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(encryptedData)
+            body: JSON.stringify(payload)
         });
-        const result = await enviarResponse.json();
 
-        if (result.success) {
+        const data = await response.json();
+        console.log('Resposta do Servidor:', data); // Adicionando log para verificar a resposta do servidor
+        if (data.success) {
             alert('Mensagem enviada com sucesso!');
             replyBox.style.display = 'none';
         } else {
-            alert('Erro ao enviar mensagem: ' + result.error);
+            alert('Erro ao enviar mensagem: ' + data.error);
         }
     } catch (error) {
         console.error('Erro ao enviar mensagem:', error);
     }
 }
+
+function encryptMessage(message, publicKey) {
+    const encrypt = new JSEncrypt();
+    encrypt.setPublicKey(publicKey);
+    
+    const secretKey = forge.random.getBytesSync(32);
+    const iv = forge.random.getBytesSync(16);
+
+    const cipher = forge.cipher.createCipher('AES-CBC', secretKey);
+    cipher.start({ iv: iv });
+    cipher.update(forge.util.createBuffer(message));
+    cipher.finish();
+    const encryptedMessage = cipher.output.getBytes();
+
+    const encryptedSecretKey = encrypt.encrypt(forge.util.encode64(secretKey));
+
+    return {
+        data: encryptedSecretKey,
+        iv: forge.util.encode64(iv),
+        mensagem: forge.util.encode64(encryptedMessage)
+    };
+}
+
+async function getPublicKeyFromServer() {
+    const response = await fetch('../cert/public.key');
+    const publicKey = await response.text();
+    return publicKey;
+}
+
+
+
 
 function extractPublicKey(cert) {
     const certificate = forge.pki.certificateFromPem(cert);

@@ -10,17 +10,10 @@ function extractPublicKey(cert) {
     return publicKey;
 }
 
-function encryptSecretKey(secretKey, publicKey) {
-    const encrypt = new JSEncrypt();
-    encrypt.setPublicKey(publicKey);
-    return encrypt.encrypt(secretKey);
-}
-
 window.onload = function() {
-    getCertificate().then(cert => {
-        const publicKey = extractPublicKey(cert);
-        const secretKey = CryptoJS.lib.WordArray.random(32).toString();
-        const iv = CryptoJS.lib.WordArray.random(16).toString();
+    getPublicKeyFromServer().then(publicKey => {
+        const secretKey = CryptoJS.lib.WordArray.random(32).toString(CryptoJS.enc.Hex);
+        const iv = CryptoJS.lib.WordArray.random(16).toString(CryptoJS.enc.Hex);
         const encryptedSecretKey = encryptSecretKey(secretKey, publicKey);
 
         fetch('../cadastro/verificarsessao.php', {
@@ -33,12 +26,7 @@ window.onload = function() {
                 secretKey: encryptedSecretKey
             })
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na solicitação. Código de status: ' + response.status);
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             if (!data.status) {
                 window.location.href = '../login/index.html';
@@ -47,7 +35,7 @@ window.onload = function() {
         .catch(error => console.error('Erro durante a verificação de autenticação:', error));
 
         document.getElementById('offer-job').addEventListener('click', function() {
-            window.location.href = '../usuario_autenticado/oferecer_emprego.html'; 
+            window.location.href = '../usuario_autenticado/oferecer_emprego.html';
         });
 
         document.getElementById('seek-job').addEventListener('click', function() {
@@ -55,3 +43,9 @@ window.onload = function() {
         });
     });
 };
+
+function encryptSecretKey(secretKey, publicKey) {
+    const encrypt = new JSEncrypt();
+    encrypt.setPublicKey(publicKey);
+    return encrypt.encrypt(secretKey);
+}
