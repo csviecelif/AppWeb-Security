@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Erro ao verificar sessão:', error));
     
     formContainer.innerHTML = `
-        <form id="offer-job-form" action="../usuario_autenticado/processar_cadastro_oferecer.php" method="POST" enctype="multipart/form-data">
+        <form id="offer-job-form">
             <div class="form-row">
                 <div class="form-column">
                     <div class="form-group">
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="form-group">
                         <label for="photo">Foto de Perfil:</label>
-                        <input id="photo" type="file" name="photo" required>
+                        <input id="photo" type="file" name="photo" accept="image/*" required>
                     </div>
                     <div class="form-group">
                         <label for="company_name">Nome da empresa:</label>
@@ -76,7 +76,64 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-green">Cadastrar</button>
+            <button type="button" id="submit-btn" class="btn btn-green">Cadastrar</button>
         </form>
     `;
+
+    document.getElementById('submit-btn').addEventListener('click', async function() {
+        const formData = new FormData(document.getElementById('offer-job-form'));
+
+        // Obtendo a chave pública do servidor
+        const publicKey = await getPublicKeyFromServer();
+
+        // Gerando chave secreta e IV
+        const secretKey = CryptoJS.lib.WordArray.random(32).toString(CryptoJS.enc.Hex);
+        const iv = CryptoJS.lib.WordArray.random(16).toString(CryptoJS.enc.Hex);
+
+        // Criptografando os dados do formulário
+        const jsonObject = {};
+        formData.forEach((value, key) => {
+            if (typeof value === 'string') {
+                jsonObject[key] = value;
+            }
+        });
+        const jsonString = JSON.stringify(jsonObject);
+        const encryptedMessage = CryptoJS.AES.encrypt(jsonString, CryptoJS.enc.Hex.parse(secretKey), { iv: CryptoJS.enc.Hex.parse(iv) }).toString();
+
+        // Criptografando a chave secreta com a chave pública
+        const encryptedSecretKey = encryptSecretKey(secretKey, publicKey);
+
+        // Adicionando dados criptografados ao FormData
+        formData.append('iv', iv);
+        formData.append('secretKey', encryptedSecretKey);
+        formData.append('mensagem', encryptedMessage);
+
+        // Enviando os dados para o servidor
+        fetch('../usuario_autenticado/processar_cadastro_oferecer.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Cadastro realizado com sucesso!');
+                window.location.href = 'mostrar_perfil.html';
+            } else {
+                alert('Erro ao realizar cadastro: ' + data.message);
+            }
+        })
+        .catch(error => console.error('Erro ao enviar dados:', error));
+    });
 });
+
+async function getPublicKeyFromServer() {
+    const response = await fetch('../cert/public.key');
+    const publicKey = await response.text();
+    return publicKey;
+}
+
+function encryptSecretKey(secretKey, publicKey) {
+    const encrypt = new JSEncrypt();
+    encrypt.setPublicKey(publicKey);
+    return encrypt.encrypt(secretKey);
+}
