@@ -209,3 +209,520 @@
 2024-06-11 06:22:06 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"TESTEAAAA"}
 2024-06-11 06:22:06 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: TESTEAAAA
 2024-06-11 06:22:06 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:22:54 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:54 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:22:54 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:54 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:54 - Mensagem Criptografada JSON: teste
+2024-06-11 06:22:54 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:54 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:54 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:22:54 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:54 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:54 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:22:54 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:54 - Mensagens decodificadas: []
+2024-06-11 06:22:57 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:57 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:22:57 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:57 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:57 - Mensagem Criptografada JSON: teste
+2024-06-11 06:22:57 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:57 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:57 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:22:57 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:57 - Processando mensagem do remetenteId: 1
+2024-06-11 06:22:57 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:22:57 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:22:57 - Mensagens decodificadas: []
+2024-06-11 06:32:41 - Processando mensagem do remetenteId: 1
+2024-06-11 06:32:41 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:32:41 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:32:41 - Processando mensagem do remetenteId: 1
+2024-06-11 06:32:41 - Mensagem Criptografada JSON: teste
+2024-06-11 06:32:41 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:32:41 - Processando mensagem do remetenteId: 1
+2024-06-11 06:32:41 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:32:41 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:32:41 - Processando mensagem do remetenteId: 1
+2024-06-11 06:32:41 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:32:41 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:32:41 - Mensagens decodificadas: []
+2024-06-11 06:34:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:34:34 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:34:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:34:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:34:34 - Mensagem Criptografada JSON: teste
+2024-06-11 06:34:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:34:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:34:34 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:34:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:34:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:34:34 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:34:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:34:34 - Mensagens decodificadas: []
+2024-06-11 06:37:06 - Processando mensagem do remetenteId: 1
+2024-06-11 06:37:06 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:37:06 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:37:06 - Processando mensagem do remetenteId: 1
+2024-06-11 06:37:06 - Mensagem Criptografada JSON: teste
+2024-06-11 06:37:06 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:37:06 - Processando mensagem do remetenteId: 1
+2024-06-11 06:37:06 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:37:06 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:37:06 - Processando mensagem do remetenteId: 1
+2024-06-11 06:37:06 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:37:06 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:37:06 - Mensagens decodificadas: []
+2024-06-11 06:37:58 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:37:58 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 06:37:58 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:38:43 - Dados criptografados recebidos: IV = a53133783966ee0e64c1d89eab60b0f6, SecretKey = EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d/Pq8/qBh5KIYuJNlnvqCkLMNY/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==, Mensagem = 4cQsSJzd0Ju9WNHf/HKQd/t70eaJ+Z1g5/Qm/p0n5lMlEP+nBlinGe/4+dQcdjSS
+2024-06-11 06:38:43 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:38:43 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 06:38:43 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: teste
+2024-06-11 06:38:43 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:39:27 - Dados criptografados recebidos: IV = 206d1fcf66ceca3401be40f0ae641fd2, SecretKey = NKR1wJJn2Pp5FutpnxZc85rqVCIWZmoUk+SEAMHKIp7UUUPwKckqpI7PzrMet1FvzAoIsaqGyiQAHE2lP1qQ64xf6Vpxcyl+ApdvmCbQ6BTaCP+dCiJSMXUXCUlRYoOpivpi/St7gVpYlscgiVzZcWn8Crb1cRIR5L1FqEcbzp1gdrgVchzIOoBhzT+GIVLarANXsi9hdVf9gFoPOpv+Gf5m49um/tzyfnH2mapIw5hgThIYUYqGtYIaoT//KiH6k4ba4IQS+wPT65UzGATwovGfD3ZR+68TK/sqKh2Wc0pv3qeq9zz0cCm9Pj9Y96H3zsupqoyBYkq4BGZVA9mTbA==, Mensagem = 4pA0UZWtuuvvxCqeWSvRu7kuXj5Ak8a4k2OUdi3Pw+YYN/hsEgY7jek6c6wOqSTUXo1Iay8QQPu0CFNmYG6xXg==
+2024-06-11 06:39:27 - Chave Secreta Descriptografada: 221adb9503078c47e7ee986c60afb72acd8283a9d831a0f370dd51ab5df2fadd
+2024-06-11 06:39:27 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"AAAAAAAAAAAAAAAAAAA"}
+2024-06-11 06:39:27 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: AAAAAAAAAAAAAAAAAAA
+2024-06-11 06:39:27 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:39:51 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:51 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:39:51 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:51 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:51 - Mensagem Criptografada JSON: teste
+2024-06-11 06:39:51 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:51 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:51 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:39:51 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:51 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:51 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:39:51 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:51 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:51 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:39:51 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:39:51 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:39:51 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:51 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:39:51 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:39:51 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:39:51 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:51 - Mensagem Criptografada JSON: null
+2024-06-11 06:39:51 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:39:51 - Mensagens decodificadas: []
+2024-06-11 06:39:53 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:53 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:39:53 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:53 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:53 - Mensagem Criptografada JSON: teste
+2024-06-11 06:39:53 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:53 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:53 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:39:53 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:53 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:53 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:39:53 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:39:53 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:53 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:39:53 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:39:53 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:39:53 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:53 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:39:53 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:39:53 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:39:53 - Processando mensagem do remetenteId: 1
+2024-06-11 06:39:53 - Mensagem Criptografada JSON: null
+2024-06-11 06:39:53 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:39:53 - Mensagens decodificadas: []
+2024-06-11 06:42:38 - Processando mensagem do remetenteId: 1
+2024-06-11 06:42:38 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:42:38 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:42:38 - Processando mensagem do remetenteId: 1
+2024-06-11 06:42:38 - Mensagem Criptografada JSON: teste
+2024-06-11 06:42:38 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:42:38 - Processando mensagem do remetenteId: 1
+2024-06-11 06:42:38 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:42:38 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:42:38 - Processando mensagem do remetenteId: 1
+2024-06-11 06:42:38 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:42:38 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:42:38 - Processando mensagem do remetenteId: 1
+2024-06-11 06:42:38 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:42:38 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:42:38 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:42:38 - Processando mensagem do remetenteId: 1
+2024-06-11 06:42:38 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:42:38 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:42:38 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:42:38 - Processando mensagem do remetenteId: 1
+2024-06-11 06:42:38 - Mensagem Criptografada JSON: null
+2024-06-11 06:42:38 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:42:38 - Mensagens decodificadas: []
+2024-06-11 06:42:56 - Chave Secreta Descriptografada: cfae56a40c4986cc9f1e8743017e0814eec2833dbf82a3b226fa79875aae2a9e
+2024-06-11 06:42:56 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"TESDASDSADASDASDAS"}
+2024-06-11 06:42:56 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:43:02 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: teste
+2024-06-11 06:43:02 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:43:02 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:43:02 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:43:02 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:43:02 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:43:02 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:43:02 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: null
+2024-06-11 06:43:02 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:43:02 - Processando mensagem do remetenteId: 1
+2024-06-11 06:43:02 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:44:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: teste
+2024-06-11 06:44:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:44:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:44:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:44:56 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:44:56 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:44:56 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:44:56 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: null
+2024-06-11 06:44:56 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:44:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:44:56 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:46:32 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: teste
+2024-06-11 06:46:32 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:46:32 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:46:32 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:46:32 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:46:32 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:46:32 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:46:32 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: null
+2024-06-11 06:46:32 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:46:32 - Processando mensagem do remetenteId: 1
+2024-06-11 06:46:32 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:48:33 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: teste
+2024-06-11 06:48:33 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:48:33 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:48:33 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:48:33 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:48:33 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:48:33 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:48:33 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: null
+2024-06-11 06:48:33 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:48:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:48:33 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:48:51 - Chave Secreta Descriptografada: ce155d650f589f1de2d2bb0e8dea1e54004c93f0ede978d57cfa31b364324945
+2024-06-11 06:48:51 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+2024-06-11 06:48:51 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:50:23 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: teste
+2024-06-11 06:50:23 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:50:23 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:50:23 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:50:23 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:50:23 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:50:23 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:50:23 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: null
+2024-06-11 06:50:23 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:50:23 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:23 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:50:26 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: teste
+2024-06-11 06:50:26 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:50:26 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:50:26 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:50:26 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:50:26 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:50:26 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:50:26 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: null
+2024-06-11 06:50:26 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:50:26 - Processando mensagem do remetenteId: 1
+2024-06-11 06:50:26 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:51:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: teste
+2024-06-11 06:51:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:51:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:51:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:51:34 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:51:34 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:51:34 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:51:34 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: null
+2024-06-11 06:51:34 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:51:34 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:34 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:51:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: teste
+2024-06-11 06:51:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: testeAAAA
+2024-06-11 06:51:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: TESTEAAAA
+2024-06-11 06:51:56 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: {"data":"ktviXdk3jTxDJjv\/G3UlxbCdmYRVyVRbuO93IcNIG+vkpwS0DDL+1FWdsHa24yoSO+j3kpfkoGZyYQKfQKWgdQ86iUD4T6Og3vSleSwBJMmhKEhX2qYfBsn1IR9+Hgnl2m1tWKV27SPkdSTl\/6gm1IOWz2NREBcEh+4iR0+duw9X5F3DpAGWuiGsbGk\/uszv7z\/i3aqs3RjTS1HDSsU89+ahjbO\/2Sw2X8rK9jEpXbr\/bQqO8zLD69vZUxTvYKUgzmKZDHhhuzkXjp9xJrscQb0zPwO3eSt7OveWYH6e7iQqi\/2fmNsdHFmwM31mXV1JLkWh+qpjleLL4HVOnfHjgw==","iv":"30e90bac5f3dbe7d4ff217f6b4805ff0","mensagem":"VYAsqnKLhXDA6ICetF7MUjmZPujIbe3fkgSQmUr3AAO01qEgenbm+A4HzG+sxF2K"}
+2024-06-11 06:51:56 - Chave Secreta Descriptografada: 464988044670f0de811aa20388d1b955c5f821dd9b422a7e454266cd6ace6ceb
+2024-06-11 06:51:56 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: {"data":"EfkTQVYSxvbj67KTqN1s+3rjnS8ZCEvBZACAWtRqSeF+m4eY4d\/Pq8\/qBh5KIYuJNlnvqCkLMNY\/SuGg74BaK5LnY1groo7b7tEKIVp1v3Pe9grFB4Z1v0e0JPhUxobwa3Rhr8DEk9m7NATEkjqHsuYlw3J8RHQTAipEYMDQcTCtPnML61kpoe+MPQRH53O59+xORyMFwogPU0TYWtEzeUOZ+06YF7XR24J19cyEZu0O24piYzuB4diUfUlPqvQc1IHrnit8a6E2EuGDnN8eFPfwc4thEcl0nCceCpQQNrUtyDcxd8gLU9\/1PYfhaxDU9q7PAXa73FsUR4tXT1u+Lw==","iv":"a53133783966ee0e64c1d89eab60b0f6","mensagem":"4cQsSJzd0Ju9WNHf\/HKQd\/t70eaJ+Z1g5\/Qm\/p0n5lMlEP+nBlinGe\/4+dQcdjSS"}
+2024-06-11 06:51:56 - Chave Secreta Descriptografada: 559abb5e7fdf3abd3194528124692373e7e4dc74196298ad10f84a59ccc6a790
+2024-06-11 06:51:56 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: null
+2024-06-11 06:51:56 - Falha ao decodificar JSON da mensagem: No error
+2024-06-11 06:51:56 - Processando mensagem do remetenteId: 1
+2024-06-11 06:51:56 - Mensagem Criptografada JSON: "TESDASDSADASDASDAS"
+2024-06-11 06:52:21 - Mensagens decodificadas: []
+2024-06-11 06:52:26 - Chave Secreta Descriptografada: 39dda1ae831a3bb5d513184901ed9f26cb1e7000216ffb51435746b32303ba08
+2024-06-11 06:52:26 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"AAAAAAAAAAAAAAAAAAAAAAA"}
+2024-06-11 06:52:26 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:52:29 - Processando mensagem do remetenteId: 1
+2024-06-11 06:52:29 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 06:52:29 - Chave Secreta Descriptografada: 39dda1ae831a3bb5d513184901ed9f26cb1e7000216ffb51435746b32303ba08
+2024-06-11 06:52:29 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:52:29 - Mensagens decodificadas: []
+2024-06-11 06:53:59 - Processando mensagem do remetenteId: 1
+2024-06-11 06:53:59 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 06:53:59 - Chave Secreta Descriptografada: 39dda1ae831a3bb5d513184901ed9f26cb1e7000216ffb51435746b32303ba08
+2024-06-11 06:53:59 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:53:59 - Mensagens decodificadas: []
+2024-06-11 06:55:30 - Processando mensagem do remetenteId: 1
+2024-06-11 06:55:30 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 06:55:30 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 06:55:30 - Chave secreta após decodificação: 
+2024-06-11 06:55:30 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 06:55:30 - Chave Secreta Descriptografada: 39dda1ae831a3bb5d513184901ed9f26cb1e7000216ffb51435746b32303ba08
+2024-06-11 06:55:30 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:55:30 - Mensagens decodificadas: []
+2024-06-11 06:55:45 - Chave Secreta Descriptografada: 0044c220efcc569af4e1826584cf6672a7c9b971af733a6155677ad086839276
+2024-06-11 06:55:45 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"DDDDDDDDDDDDDDDDDDDDDDD"}
+2024-06-11 06:55:45 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:55:49 - Processando mensagem do remetenteId: 1
+2024-06-11 06:55:49 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 06:55:49 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 06:55:49 - Chave secreta após decodificação: 
+2024-06-11 06:55:49 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 06:55:49 - Chave Secreta Descriptografada: 39dda1ae831a3bb5d513184901ed9f26cb1e7000216ffb51435746b32303ba08
+2024-06-11 06:55:49 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 06:55:49 - Processando mensagem do remetenteId: 1
+2024-06-11 06:55:49 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 06:55:49 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 06:55:49 - Chave secreta após decodificação: 39dda1ae831a3bb5d513184901ed9f26cb1e7000216ffb51435746b32303ba08
+2024-06-11 06:55:49 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 06:55:49 - Chave Secreta Descriptografada: 0044c220efcc569af4e1826584cf6672a7c9b971af733a6155677ad086839276
+2024-06-11 06:55:49 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:55:49 - Mensagens decodificadas: []
+2024-06-11 06:57:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:57:33 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 06:57:33 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 06:57:33 - Chave secreta após decodificação: 
+2024-06-11 06:57:33 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 06:57:33 - Chave Secreta Descriptografada: 39dda1ae831a3bb5d513184901ed9f26cb1e7000216ffb51435746b32303ba08
+2024-06-11 06:57:33 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:57:33 - Processando mensagem do remetenteId: 1
+2024-06-11 06:57:33 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 06:57:33 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 06:57:33 - Chave secreta após decodificação: 39dda1ae831a3bb5d513184901ed9f26
+2024-06-11 06:57:33 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 06:57:33 - Chave Secreta Descriptografada: 0044c220efcc569af4e1826584cf6672a7c9b971af733a6155677ad086839276
+2024-06-11 06:57:33 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:57:33 - Mensagens decodificadas: []
+2024-06-11 06:58:42 - Processando mensagem do remetenteId: 1
+2024-06-11 06:58:42 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 06:58:42 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 06:58:42 - Chave secreta após decodificação: 
+2024-06-11 06:58:42 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 06:58:42 - Chave Secreta Descriptografada: 33396464613161653833316133626235643531333138343930316564396632366362316537303030323136666662353134333537343662333233303362613038
+2024-06-11 06:58:42 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:58:42 - Processando mensagem do remetenteId: 1
+2024-06-11 06:58:42 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 06:58:42 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 06:58:42 - Chave secreta após decodificação: 39dda1ae831a3bb5d513184901ed9f26
+2024-06-11 06:58:42 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 06:58:42 - Chave Secreta Descriptografada: 30303434633232306566636335363961663465313832363538346366363637326137633962393731616637333361363135353637376164303836383339323736
+2024-06-11 06:58:42 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 06:58:42 - Mensagens decodificadas: []
+2024-06-11 07:00:15 - Processando mensagem do remetenteId: 1
+2024-06-11 07:00:15 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:00:15 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 07:00:15 - Chave secreta após decodificação: 2424b307d25a35c0813b63695a38b3bf7baedc21028ee6658894725192c353d166da03a3d2627c7abe6cd85e9559a59592fd3de2ca50008eab9e61956258175ab215f22130f2dc6fb2b75a0680fbaf4db3344179d45e3d27a95cdafc76b527e010a5efb5d90526cf9b315b8b0a47bc6f1cca0d278272e0eeac6f85bfb38cc6ff37b031aac4b5a8ea13e3b8ed2d2035953dfe4d73569b68ab2b84deda882d708c1ce8f63c7fe88402a1253cf8250a54906e4a3f1b70ae416e9440e2e9c6ce5ef73901e607cc58ec64c18979262993128c8a9a115b22923b0e28dc93af05a351afd61a644300f49e170827cd557f4893453be86de0678abfd5eaf594922a06dc59
+2024-06-11 07:00:15 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 07:00:15 - Chave Secreta Descriptografada: 33396464613161653833316133626235643531333138343930316564396632366362316537303030323136666662353134333537343662333233303362613038
+2024-06-11 07:00:15 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:00:15 - Processando mensagem do remetenteId: 1
+2024-06-11 07:00:15 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 07:00:15 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 07:00:15 - Chave secreta após decodificação: 9f49b3e7f3a533d6e19cca127b9f4e57cc78f9501fcc7072eb0ca5630a6283de0c3118686c2d0555a716e4f9db64fccb82eadad3bf0bc4d618f1cad7f31f1256dbcb5a3dce3861ba36c3f18d32982cb8f644b8997cc4c9d5730a0c9a0ee46a6f3bc3acfcf253a90e9b6f8cd6f8f5c84b7cbeaf3852b7fa40fbe28c8a217386d9cbdb2c7414ad00066053166fdedfb57ea65a82c40e631f7aa4d2372e503a8a4cb1232753d3a9053da6bdc81bdc194683d48a5798624cfa63613f635db4466c329e32b11706200cd726942b1569ac95be3c03466667463b6eb1e665d5ae6624ee167629178ab43498361aad103f6772891eff34ef44b4b8ca2d33331f26ed3b38
+2024-06-11 07:00:15 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 07:00:15 - Chave Secreta Descriptografada: 30303434633232306566636335363961663465313832363538346366363637326137633962393731616637333361363135353637376164303836383339323736
+2024-06-11 07:00:15 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:00:15 - Mensagens decodificadas: []
+2024-06-11 07:02:05 - Processando mensagem do remetenteId: 1
+2024-06-11 07:02:05 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:02:05 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 07:02:05 - Chave secreta após decodificação: 2424b307d25a35c0813b63695a38b3bf7baedc21028ee6658894725192c353d166da03a3d2627c7abe6cd85e9559a59592fd3de2ca50008eab9e61956258175ab215f22130f2dc6fb2b75a0680fbaf4db3344179d45e3d27a95cdafc76b527e010a5efb5d90526cf9b315b8b0a47bc6f1cca0d278272e0eeac6f85bfb38cc6ff37b031aac4b5a8ea13e3b8ed2d2035953dfe4d73569b68ab2b84deda882d708c1ce8f63c7fe88402a1253cf8250a54906e4a3f1b70ae416e9440e2e9c6ce5ef73901e607cc58ec64c18979262993128c8a9a115b22923b0e28dc93af05a351afd61a644300f49e170827cd557f4893453be86de0678abfd5eaf594922a06dc59
+2024-06-11 07:02:05 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 07:02:05 - Chave Secreta Descriptografada: 33396464613161653833316133626235643531333138343930316564396632366362316537303030323136666662353134333537343662333233303362613038
+2024-06-11 07:02:05 - Chave Secreta ajustada: 3339646461316165383331613362623564353133313834393031656439663236
+2024-06-11 07:02:05 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:02:05 - Processando mensagem do remetenteId: 1
+2024-06-11 07:02:05 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 07:02:05 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 07:02:05 - Chave secreta após decodificação: 9f49b3e7f3a533d6e19cca127b9f4e57cc78f9501fcc7072eb0ca5630a6283de0c3118686c2d0555a716e4f9db64fccb82eadad3bf0bc4d618f1cad7f31f1256dbcb5a3dce3861ba36c3f18d32982cb8f644b8997cc4c9d5730a0c9a0ee46a6f3bc3acfcf253a90e9b6f8cd6f8f5c84b7cbeaf3852b7fa40fbe28c8a217386d9cbdb2c7414ad00066053166fdedfb57ea65a82c40e631f7aa4d2372e503a8a4cb1232753d3a9053da6bdc81bdc194683d48a5798624cfa63613f635db4466c329e32b11706200cd726942b1569ac95be3c03466667463b6eb1e665d5ae6624ee167629178ab43498361aad103f6772891eff34ef44b4b8ca2d33331f26ed3b38
+2024-06-11 07:02:05 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 07:02:05 - Chave Secreta Descriptografada: 30303434633232306566636335363961663465313832363538346366363637326137633962393731616637333361363135353637376164303836383339323736
+2024-06-11 07:02:05 - Chave Secreta ajustada: 3030343463323230656663633536396166346531383236353834636636363732
+2024-06-11 07:02:05 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:02:05 - Mensagens decodificadas: []
+2024-06-11 07:04:55 - Processando mensagem do remetenteId: 1
+2024-06-11 07:04:55 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:04:55 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 07:04:55 - Chave secreta após decodificação: 2424b307d25a35c0813b63695a38b3bf7baedc21028ee6658894725192c353d166da03a3d2627c7abe6cd85e9559a59592fd3de2ca50008eab9e61956258175ab215f22130f2dc6fb2b75a0680fbaf4db3344179d45e3d27a95cdafc76b527e010a5efb5d90526cf9b315b8b0a47bc6f1cca0d278272e0eeac6f85bfb38cc6ff37b031aac4b5a8ea13e3b8ed2d2035953dfe4d73569b68ab2b84deda882d708c1ce8f63c7fe88402a1253cf8250a54906e4a3f1b70ae416e9440e2e9c6ce5ef73901e607cc58ec64c18979262993128c8a9a115b22923b0e28dc93af05a351afd61a644300f49e170827cd557f4893453be86de0678abfd5eaf594922a06dc59
+2024-06-11 07:04:55 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 07:04:55 - Chave Secreta Descriptografada: 33396464613161653833316133626235643531333138343930316564396632366362316537303030323136666662353134333537343662333233303362613038
+2024-06-11 07:04:55 - Chave Secreta ajustada: 3339646461316165383331613362623564353133313834393031656439663236
+2024-06-11 07:04:55 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:04:55 - Processando mensagem do remetenteId: 1
+2024-06-11 07:04:55 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 07:04:55 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 07:04:55 - Chave secreta após decodificação: 9f49b3e7f3a533d6e19cca127b9f4e57cc78f9501fcc7072eb0ca5630a6283de0c3118686c2d0555a716e4f9db64fccb82eadad3bf0bc4d618f1cad7f31f1256dbcb5a3dce3861ba36c3f18d32982cb8f644b8997cc4c9d5730a0c9a0ee46a6f3bc3acfcf253a90e9b6f8cd6f8f5c84b7cbeaf3852b7fa40fbe28c8a217386d9cbdb2c7414ad00066053166fdedfb57ea65a82c40e631f7aa4d2372e503a8a4cb1232753d3a9053da6bdc81bdc194683d48a5798624cfa63613f635db4466c329e32b11706200cd726942b1569ac95be3c03466667463b6eb1e665d5ae6624ee167629178ab43498361aad103f6772891eff34ef44b4b8ca2d33331f26ed3b38
+2024-06-11 07:04:55 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 07:04:55 - Chave Secreta Descriptografada: 30303434633232306566636335363961663465313832363538346366363637326137633962393731616637333361363135353637376164303836383339323736
+2024-06-11 07:04:55 - Chave Secreta ajustada: 3030343463323230656663633536396166346531383236353834636636363732
+2024-06-11 07:04:55 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:04:55 - Mensagens decodificadas: []
+2024-06-11 07:06:35 - Processando mensagem do remetenteId: 1
+2024-06-11 07:06:35 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:06:35 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 07:06:35 - Chave secreta após decodificação: 2424b307d25a35c0813b63695a38b3bf7baedc21028ee6658894725192c353d166da03a3d2627c7abe6cd85e9559a59592fd3de2ca50008eab9e61956258175ab215f22130f2dc6fb2b75a0680fbaf4db3344179d45e3d27a95cdafc76b527e010a5efb5d90526cf9b315b8b0a47bc6f1cca0d278272e0eeac6f85bfb38cc6ff37b031aac4b5a8ea13e3b8ed2d2035953dfe4d73569b68ab2b84deda882d708c1ce8f63c7fe88402a1253cf8250a54906e4a3f1b70ae416e9440e2e9c6ce5ef73901e607cc58ec64c18979262993128c8a9a115b22923b0e28dc93af05a351afd61a644300f49e170827cd557f4893453be86de0678abfd5eaf594922a06dc59
+2024-06-11 07:06:35 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 07:06:35 - Chave Secreta Descriptografada: 33396464613161653833316133626235643531333138343930316564396632366362316537303030323136666662353134333537343662333233303362613038
+2024-06-11 07:06:35 - Chave Secreta ajustada: 3339646461316165383331613362623564353133313834393031656439663236
+2024-06-11 07:06:35 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:06:35 - Processando mensagem do remetenteId: 1
+2024-06-11 07:06:35 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 07:06:35 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 07:06:35 - Chave secreta após decodificação: 9f49b3e7f3a533d6e19cca127b9f4e57cc78f9501fcc7072eb0ca5630a6283de0c3118686c2d0555a716e4f9db64fccb82eadad3bf0bc4d618f1cad7f31f1256dbcb5a3dce3861ba36c3f18d32982cb8f644b8997cc4c9d5730a0c9a0ee46a6f3bc3acfcf253a90e9b6f8cd6f8f5c84b7cbeaf3852b7fa40fbe28c8a217386d9cbdb2c7414ad00066053166fdedfb57ea65a82c40e631f7aa4d2372e503a8a4cb1232753d3a9053da6bdc81bdc194683d48a5798624cfa63613f635db4466c329e32b11706200cd726942b1569ac95be3c03466667463b6eb1e665d5ae6624ee167629178ab43498361aad103f6772891eff34ef44b4b8ca2d33331f26ed3b38
+2024-06-11 07:06:35 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 07:06:35 - Chave Secreta Descriptografada: 30303434633232306566636335363961663465313832363538346366363637326137633962393731616637333361363135353637376164303836383339323736
+2024-06-11 07:06:35 - Chave Secreta ajustada: 3030343463323230656663633536396166346531383236353834636636363732
+2024-06-11 07:06:35 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:06:35 - Mensagens decodificadas: []
+2024-06-11 07:12:20 - Processando mensagem do remetenteId: 1
+2024-06-11 07:12:20 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:12:20 - IV após decodificação: ec52e14b58d8514ccb3016557bf05349
+2024-06-11 07:12:20 - Chave secreta após decodificação: 2424b307d25a35c0813b63695a38b3bf7baedc21028ee6658894725192c353d166da03a3d2627c7abe6cd85e9559a59592fd3de2ca50008eab9e61956258175ab215f22130f2dc6fb2b75a0680fbaf4db3344179d45e3d27a95cdafc76b527e010a5efb5d90526cf9b315b8b0a47bc6f1cca0d278272e0eeac6f85bfb38cc6ff37b031aac4b5a8ea13e3b8ed2d2035953dfe4d73569b68ab2b84deda882d708c1ce8f63c7fe88402a1253cf8250a54906e4a3f1b70ae416e9440e2e9c6ce5ef73901e607cc58ec64c18979262993128c8a9a115b22923b0e28dc93af05a351afd61a644300f49e170827cd557f4893453be86de0678abfd5eaf594922a06dc59
+2024-06-11 07:12:20 - Mensagem criptografada após decodificação: a66a55d2d231394d44a51e2f1b70dd5a613ed22d4db81fd2c12e6b0b4c4276380fb251ce3a80a3e274dc9428a7283627b0138fdbeb37e842837d8057421c80a6
+2024-06-11 07:12:20 - Chave Secreta Descriptografada: 33396464613161653833316133626235643531333138343930316564396632366362316537303030323136666662353134333537343662333233303362613038
+2024-06-11 07:12:20 - Chave Secreta ajustada: 33396464613161653833316133626235643531333138343930316564396632366362316537303030323136666662353134333537343662333233303362613038
+2024-06-11 07:12:20 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 07:12:20 - Processando mensagem do remetenteId: 1
+2024-06-11 07:12:20 - Mensagem Criptografada JSON: {"data":"n0mz5\/OlM9bhnMoSe59OV8x4+VAfzHBy6wylYwpig94MMRhobC0FVacW5PnbZPzLgura078LxNYY8crX8x8SVtvLWj3OOGG6NsPxjTKYLLj2RLiZfMTJ1XMKDJoO5GpvO8Os\/PJTqQ6bb4zW+PXIS3y+rzhSt\/pA++KMiiFzhtnL2yx0FK0ABmBTFm\/e37V+plqCxA5jH3qk0jcuUDqKTLEjJ1PTqQU9pr3IG9wZRoPUileYYkz6Y2E\/Y120RmwynjKxFwYgDNcmlCsVaayVvjwDRmZnRjtuseZl1a5mJO4WdikXirQ0mDYarRA\/Z3KJHv8070S0uMotMzMfJu07OA==","iv":"3bc5a90c4a2d23eb959837ba102390fb","mensagem":"jxoSB+xRPM7addiLO7+sQEK5F9XmOGx7mnoUxLvFhjZlhqBXunkxpMkSvUJX2IzOlzZ3MN3dT5sCq3ZRTtiBTw=="}
+2024-06-11 07:12:20 - IV após decodificação: 3bc5a90c4a2d23eb959837ba102390fb
+2024-06-11 07:12:20 - Chave secreta após decodificação: 9f49b3e7f3a533d6e19cca127b9f4e57cc78f9501fcc7072eb0ca5630a6283de0c3118686c2d0555a716e4f9db64fccb82eadad3bf0bc4d618f1cad7f31f1256dbcb5a3dce3861ba36c3f18d32982cb8f644b8997cc4c9d5730a0c9a0ee46a6f3bc3acfcf253a90e9b6f8cd6f8f5c84b7cbeaf3852b7fa40fbe28c8a217386d9cbdb2c7414ad00066053166fdedfb57ea65a82c40e631f7aa4d2372e503a8a4cb1232753d3a9053da6bdc81bdc194683d48a5798624cfa63613f635db4466c329e32b11706200cd726942b1569ac95be3c03466667463b6eb1e665d5ae6624ee167629178ab43498361aad103f6772891eff34ef44b4b8ca2d33331f26ed3b38
+2024-06-11 07:12:20 - Mensagem criptografada após decodificação: 8f1a1207ec513cceda75d88b3bbfac4042b917d5e6386c7b9a7a14c4bbc586366586a057ba7931a4c912bd4257d88cce97367730dddd4f9b02ab76514ed8814f
+2024-06-11 07:12:20 - Chave Secreta Descriptografada: 30303434633232306566636335363961663465313832363538346366363637326137633962393731616637333361363135353637376164303836383339323736
+2024-06-11 07:12:20 - Chave Secreta ajustada: 30303434633232306566636335363961663465313832363538346366363637326137633962393731616637333361363135353637376164303836383339323736
+2024-06-11 07:12:20 - Falha ao descriptografar a mensagem: error:1C800064:Provider routines::bad decrypt
+2024-06-11 07:12:20 - Mensagens decodificadas: []
+2024-06-11 07:21:14 - Processando mensagem do remetenteId: 1
+2024-06-11 07:21:14 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:22:24 - Processando mensagem do remetenteId: 1
+2024-06-11 07:22:24 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:24:34 - Processando mensagem do remetenteId: 1
+2024-06-11 07:24:34 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}
+2024-06-11 07:26:29 - Processando mensagem do remetenteId: 1
+2024-06-11 07:26:29 - Mensagem Criptografada JSON: {"data":"JCSzB9JaNcCBO2NpWjizv3uu3CECjuZliJRyUZLDU9Fm2gOj0mJ8er5s2F6VWaWVkv094spQAI6rnmGVYlgXWrIV8iEw8txvsrdaBoD7r02zNEF51F49J6lc2vx2tSfgEKXvtdkFJs+bMVuLCke8bxzKDSeCcuDurG+Fv7OMxv83sDGqxLWo6hPjuO0tIDWVPf5Nc1abaKsrhN7aiC1wjBzo9jx\/6IQCoSU8+CUKVJBuSj8bcK5BbpRA4unGzl73OQHmB8xY7GTBiXkmKZMSjIqaEVsikjsOKNyTrwWjUa\/WGmRDAPSeFwgnzVV\/SJNFO+ht4GeKv9Xq9ZSSKgbcWQ==","iv":"ec52e14b58d8514ccb3016557bf05349","mensagem":"pmpV0tIxOU1EpR4vG3DdWmE+0i1NuB\/SwS5rC0xCdjgPslHOOoCj4nTclCinKDYnsBOP2+s36EKDfYBXQhyApg=="}

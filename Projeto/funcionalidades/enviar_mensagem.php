@@ -20,8 +20,6 @@ $iv = $_POST['iv'];
 $encryptedSecretKey = $_POST['secretKey'];
 $encryptedMessage = $_POST['mensagem'];
 
-logSecurityEvent("Dados criptografados recebidos: IV = $iv, SecretKey = $encryptedSecretKey, Mensagem = $encryptedMessage");
-
 if (!$iv || !$encryptedSecretKey || !$encryptedMessage) {
     echo json_encode(['error' => 'Dados criptografados não recebidos corretamente.']);
     logSecurityEvent("Dados criptografados não recebidos corretamente.");
@@ -64,20 +62,18 @@ if ($decryptedMessage === false) {
 }
 
 $decodedData = json_decode($decryptedMessage, true);
-
-if (!$decodedData) {
-    logSecurityEvent("Falha ao decodificar JSON da mensagem: " . json_last_error_msg());
-    exit();
-}
-
 $userId = $_SESSION['userId'];
 $destinatarioId = $decodedData['destinatarioId'];
 $mensagem = $decodedData['mensagem'];
 
-logSecurityEvent("Preparando para inserir a mensagem no banco de dados. remetenteId: $userId, destinatarioId: $destinatarioId, mensagem: $mensagem");
+$mensagemJson = json_encode([
+    'data' => base64_encode($encryptedSecretKey),
+    'iv' => bin2hex($iv),
+    'mensagem' => base64_encode($encryptedMessage)
+]);
 
 $query = $con->prepare("INSERT INTO mensagens (remetenteId, destinatarioId, mensagem, data_envio) VALUES (?, ?, ?, NOW())");
-$query->bind_param("iis", $userId, $destinatarioId, $mensagem);
+$query->bind_param("iis", $userId, $destinatarioId, $mensagemJson);
 
 if ($query->execute()) {
     echo json_encode(['success' => true, 'message' => 'Mensagem enviada com sucesso!']);
@@ -89,4 +85,6 @@ if ($query->execute()) {
 
 $query->close();
 $con->close();
+
+
 ?>

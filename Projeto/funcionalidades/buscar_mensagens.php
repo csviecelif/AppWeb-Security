@@ -1,6 +1,12 @@
 <?php
 header('Content-Type: application/json');
 
+// Caminho correto para autoload.php
+require __DIR__ . '/../vendor/autoload.php';
+
+use phpseclib3\Crypt\AES;
+use phpseclib3\Crypt\PublicKeyLoader;
+
 // Função para logar mensagens de segurança
 function logSecurityEvent($message) {
     $logFile = 'security.log';
@@ -49,40 +55,50 @@ while ($row = $result->fetch_assoc()) {
         continue;
     }
 
-    $privateKey = openssl_pkey_get_private('file://' . $privateKeyPath);
-    if (!$privateKey) {
-        logSecurityEvent("Falha ao carregar a chave privada: " . openssl_error_string());
-        continue;
-    }
-
-    // Descriptografa a chave secreta
+    $privateKey = file_get_contents($privateKeyPath);
+    $rsa = PublicKeyLoader::loadPrivateKey($privateKey);
     $encryptedData = base64_decode($encryptedMessage['data']);
     $iv = hex2bin($encryptedMessage['iv']);
     $encryptedMessageText = base64_decode($encryptedMessage['mensagem']);
     
-    $success = openssl_private_decrypt($encryptedData, $decryptedSecretKey, $privateKey);
-    if (!$success) {
-        logSecurityEvent("Falha ao descriptografar a chave secreta: " . openssl_error_string());
-        continue;
+    logSecurityEvent("IV após decodificação: " . bin2hex($iv));
+    logSecurityEvent("Chave secreta após decodificação: " . bin2hex($encryptedData));
+    logSecurityEvent("Mensagem criptografada após decodificação: " . bin2hex($encryptedMessageText));
+    
+    $decryptedSecretKey = $rsa->decrypt($encryptedData);
+    if ($decryptedSecretKey !== false) {
+        logSecurityEvent("Chave Secreta Descriptografada: " . bin2hex($decryptedSecretKey));
+    
+        // Certifique-se de que a chave secreta tenha 32 bytes (256 bits) para AES-256-CBC
+        if (strlen($decryptedSecretKey) > 32) {
+            $decryptedSecretKey = substr($decryptedSecretKey, 0, 32);
+        } else {
+            $decryptedSecretKey = str_pad($decryptedSecretKey, 32, "\0");
+        }
+    
+        logSecurityEvent("Chave Secreta ajustada: " . bin2hex($decryptedSecretKey));
+    
+        // Descriptografa a mensagem usando a chave secreta ajustada e o IV
+        $aes = new AES('cbc');
+        $aes->setIV($iv);
+        $aes->setKey($decryptedSecretKey);
+
+        $decryptedMessage = $aes->decrypt($encryptedMessageText);
+        if ($decryptedMessage === false) {
+            logSecurityEvent("Falha ao descriptografar a mensagem");
+        } else {
+            logSecurityEvent("Mensagem Descriptografada: " . $decryptedMessage);
+
+            $mensagens[] = [
+                'remetenteId' => $remetenteId,
+                'remetenteNome' => 'Nome do Remetente', // Buscar o nome do remetente se necessário
+                'mensagem' => $decryptedMessage,
+                'data_envio' => $dataEnvio
+            ];
+        }
+    } else {
+        logSecurityEvent("Falha ao descriptografar a chave secreta");
     }
-
-    logSecurityEvent("Chave Secreta Descriptografada: " . $decryptedSecretKey);
-
-    // Descriptografa a mensagem usando a chave secreta e o IV
-    $decryptedMessage = openssl_decrypt($encryptedMessageText, 'aes-256-cbc', $decryptedSecretKey, OPENSSL_RAW_DATA, $iv);
-    if ($decryptedMessage === false) {
-        logSecurityEvent("Falha ao descriptografar a mensagem: " . openssl_error_string());
-        continue;
-    }
-
-    logSecurityEvent("Mensagem Descriptografada: " . $decryptedMessage);
-
-    $mensagens[] = [
-        'remetenteId' => $remetenteId,
-        'remetenteNome' => 'Nome do Remetente', // Buscar o nome do remetente se necessário
-        'mensagem' => $decryptedMessage,
-        'data_envio' => $dataEnvio
-    ];
 }
 
 logSecurityEvent("Mensagens decodificadas: " . json_encode($mensagens));
@@ -90,5 +106,4 @@ logSecurityEvent("Mensagens decodificadas: " . json_encode($mensagens));
 echo json_encode($mensagens);
 $query->close();
 $con->close();
-
 ?>
