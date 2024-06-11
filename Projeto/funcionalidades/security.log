@@ -6,3 +6,206 @@
 2024-06-11 04:52:27 - Dados criptografados não recebidos corretamente.
 2024-06-11 04:52:32 - Dados Recebidos: {"destinatarioId":1,"mensagem":"teste"}
 2024-06-11 04:52:32 - Dados criptografados não recebidos corretamente.
+2024-06-11 05:23:34 - Chave Secreta Descriptografada: 17cd645c6fb933405f7108d17f9c5dec393ac3e2865645b59a851627fc36ae43
+2024-06-11 05:23:34 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 05:23:34 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 05:24:35 - Chave Secreta Descriptografada: a68e5633b5e607737023f14477bbb61fdc8e64b8a4a4e54b2edcb56bdb9a36b1
+2024-06-11 05:24:35 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 05:24:35 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 05:25:59 - Processando mensagem do remetenteId: 1
+2024-06-11 05:25:59 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:25:59 - Processando mensagem do remetenteId: 1
+2024-06-11 05:25:59 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:25:59 - Mensagens decodificadas: []
+2024-06-11 05:28:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:28:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:28:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:28:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:28:39 - Mensagens decodificadas: []
+2024-06-11 05:31:15 - Processando mensagem do remetenteId: 1
+2024-06-11 05:31:15 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:31:15 - Processando mensagem do remetenteId: 1
+2024-06-11 05:31:15 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:31:15 - Mensagens decodificadas: []
+2024-06-11 05:31:31 - Chave Secreta Descriptografada: c0919a1ae74030fe27fd746e863ea01f222aefac6aafe207981c10645315def5
+2024-06-11 05:31:31 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 05:31:31 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 05:31:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:31:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:31:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:31:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:31:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:31:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:31:39 - Mensagens decodificadas: []
+2024-06-11 05:32:20 - Processando mensagem do remetenteId: 1
+2024-06-11 05:32:20 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:32:20 - Processando mensagem do remetenteId: 1
+2024-06-11 05:32:20 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:32:20 - Processando mensagem do remetenteId: 1
+2024-06-11 05:32:20 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:32:20 - Mensagens decodificadas: []
+2024-06-11 05:34:21 - Processando mensagem do remetenteId: 1
+2024-06-11 05:34:21 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:34:21 - Processando mensagem do remetenteId: 1
+2024-06-11 05:34:21 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:34:21 - Processando mensagem do remetenteId: 1
+2024-06-11 05:34:21 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:34:21 - Mensagens decodificadas: []
+2024-06-11 05:36:04 - Processando mensagem do remetenteId: 1
+2024-06-11 05:36:04 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:36:04 - Processando mensagem do remetenteId: 1
+2024-06-11 05:36:04 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:36:04 - Processando mensagem do remetenteId: 1
+2024-06-11 05:36:04 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:36:04 - Mensagens decodificadas: []
+2024-06-11 05:40:25 - Processando mensagem do remetenteId: 1
+2024-06-11 05:40:25 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:40:25 - Processando mensagem do remetenteId: 1
+2024-06-11 05:40:25 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:40:25 - Processando mensagem do remetenteId: 1
+2024-06-11 05:40:25 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:40:25 - Mensagens decodificadas: []
+2024-06-11 05:42:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:42:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:42:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:42:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:42:39 - Processando mensagem do remetenteId: 1
+2024-06-11 05:42:39 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:42:39 - Mensagens decodificadas: []
+2024-06-11 05:44:38 - Processando mensagem do remetenteId: 1
+2024-06-11 05:44:38 - Mensagem Criptografada JSON: teste
+2024-06-11 05:44:38 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:44:38 - Processando mensagem do remetenteId: 1
+2024-06-11 05:44:38 - Mensagem Criptografada JSON: teste
+2024-06-11 05:44:38 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:44:38 - Processando mensagem do remetenteId: 1
+2024-06-11 05:44:38 - Mensagem Criptografada JSON: teste
+2024-06-11 05:44:38 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:44:38 - Mensagens decodificadas: []
+2024-06-11 05:46:16 - Dados criptografados recebidos: IV = b0874d0858eb592a5d1820d9de2cfcba, SecretKey = KOWy53CXYi5uHXDaOE1UJcY7bQH73J38Bi905/0f94/aZaCQm8voOnTPTl1jiDPFbWLEsOA6qQ+JPYOlQAO9jduamkHRARn/wsXuaenfIyGGskM+KYTb4rzDdFDJU5bT2RXzZF7dfOXtgakvPLgSHHQ8b7LvKgkhSAbk3rCC5j91mKB79S5MnWUrL+e7vFrkE3cCQkRN9eNrSDjZ97e5DHthfI2nAsQKTRMTPRl7P8PJVXH5wk+TPyiP3EogwTHy4iGVe6ecst3C4K7CzSXkUFehvwDo6QaZQxnZvUX3Q20mgHcoR42B0fAkxkhZ8l2lnufvaPR+H7QXFE+xX/9J0w==, Mensagem = KGIRsA5Pyv0G8W97xz4YC3O2t9Ns5lX7aAgu6OgVdFn6TJb7DHe5CyWMwekRTebC
+2024-06-11 05:46:16 - Chave Secreta Descriptografada: f87439e049239ac68470b17f4e5c833f5d461a8da8caa8b512990517e70f189e
+2024-06-11 05:46:16 - Mensagem Descriptografada: 
+2024-06-11 05:46:16 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 05:46:34 - Dados criptografados recebidos: IV = f6fe9fd79ea99754031228162f3c631d, SecretKey = TR95x79zFpCPjx097xjqmbSeM8VQuq57pbYAMFMBCSupPsG/g0GNm0nmv8JMwTlDrVaZG0jlu6jN5crUWoyArbsvdC5+aZYSoKIwHsAfS6YKcmajMrZOkcbM0fr4gKGPSH68hu075PAkkyb9UMzMA637Q+2qYFUP1hM8P0g7TPBXGsSkYVTeGMQfkYYFGtK0g8M1I1It/Q9xn/LPV9mN+wqU4E28Dzm/lJy58r76S3YaVnbv1hSof+dXf1eB3MCszkZUNj4Jf881I7oCEwgwAGySJU9e/SHdn8+NNAdoLowrUtOKVviuu++9tzZ0hqPtQ00fyrunFpR1bCgHsYLLhw==, Mensagem = MPmF/sj7enov/TI8xEjSj8VOAUidwGicQcT5QnZnbdvmGC9/XhvSLV5WO83LPoy5
+2024-06-11 05:46:34 - Chave Secreta Descriptografada: ec5298145513dbac907b049258f6c1e8d3f9d23fdee93fe7af18ab944a876591
+2024-06-11 05:46:34 - Mensagem Descriptografada: 
+2024-06-11 05:46:34 - Falha ao descriptografar a mensagem: error:03000082:digital envelope routines::invalid key length
+2024-06-11 05:49:10 - Chave Secreta Descriptografada: 
+2024-06-11 05:49:10 - Falha ao descriptografar a chave secreta: error:03000082:digital envelope routines::invalid key length
+2024-06-11 05:51:08 - Dados criptografados recebidos: IV = becdf6b2d8f7538f88b8d2b7ee41cf4c, SecretKey = mGW+4BBh5lKR0uNUE9jK8Zpjo2hEHh2cjOyWWNMafQAG28n2Gn3Mkt6ZrepCn71sROmHlaSkuW272FPG5nOO/EEoC8P8k1zdweraORtvjolHA6OpgjRXAlo+9jTXfPwAK7av20QMcTk92U99hyGtflzpMu0F0bfk0hkhRgGKf++hBXibdUxR4s6M/Z3Lm5149U1Mjr0gXX6satCIeb3+JlNeDfeJtLNIUAgUPDnY9IN+yZ8IG+zCRy77Zy26we9p7S73EuiKgA6+myOYYB1s+sdu5UyPDJu7cATPl2OzXfvIfjrxv1JnfhfjRbr0zRpzLMty8WdMf/j1T6bUEgcj7g==, Mensagem = jCIb1c6z5y4iP0yjzbzg09a7wjKRdJEwBk//AzqeUa1KWfEk0M/XT9c5ti0PtXIq
+2024-06-11 05:51:08 - Chave Secreta Descriptografada: 420014e8eba092d6030059bfac7782f1a948bec4c97813acbb40a02e9cd263ba
+2024-06-11 05:51:08 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 05:51:08 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 05:51:51 - Dados criptografados recebidos: IV = 533140f58fbfc02134bfe43c4d583479, SecretKey = NGp5izEy5b/LlKw0RmQBWy9d2WN6YymzMGjswbNTiJt0VDp42yK3lkABqgCdTqZ+c9CgadGsVxL8n4idpHvROSBa3i6XTj4FD5Fu6wMBt1gcKa7+9BzT8OxshC8GA6nOm9lp2Hr5SIDYSXpo1hV01G0tkIoQmXEd5KSJ4LbMrVn0i0stD4GBx0oR1RrB6dEKvUOPJKk/2XRpDiaAtd6bWwjEKkBdGskxClCVT2KRoBciwqFUKNPMznn9pcEnmKx9FkBfqE2Anh2JgOCLJF3GdvHlu72RDhGcG1FijLjeQpzlj9qBcmc50ta8yVqxsmKJDcu3hi0rHSZhRNZN7fD52g==, Mensagem = l7lmywoWS2QV+pIPMnQlUT4LIjk/3bziuNNJHXw3PWVhjnG/cua83ewE6pF6DOyr
+2024-06-11 05:51:51 - Chave Secreta Descriptografada: 7e31e58f360c75be05eb6404641f6035b181917b5f6cd5f8493be0e20030ad6a
+2024-06-11 05:51:51 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"QUERO VER"}
+2024-06-11 05:51:51 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 05:52:30 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:30 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:30 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:30 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:30 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:30 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:30 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:30 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:30 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:30 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:30 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:30 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:30 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:30 - Mensagem Criptografada JSON: QUERO VER
+2024-06-11 05:52:30 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:30 - Mensagens decodificadas: []
+2024-06-11 05:52:34 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:34 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:34 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:34 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:34 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:34 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:34 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:34 - Mensagem Criptografada JSON: teste
+2024-06-11 05:52:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:34 - Processando mensagem do remetenteId: 1
+2024-06-11 05:52:34 - Mensagem Criptografada JSON: QUERO VER
+2024-06-11 05:52:34 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 05:52:34 - Mensagens decodificadas: []
+2024-06-11 05:53:58 - Dados criptografados recebidos: IV = c5abba3f8fa3c3827942ecedab8bb3ae, SecretKey = K726RkbeOrd/n7W1QjybtruMSFUzPIs0cD1N8DoqELknhscnPUy8G8NdRHfxpxG4+/nW8uosDdB/mDVQQv/HTxOwzoEvLXFcYWVX83A1GAWZKsv9ttL5UAWSuq72gFDIgbUO2XI1p11AdvSxOCqN1xx6WcX6bPqC9CW5aGRtK0Tnc3nKYF9mLfA8J21Mixk6s4wvxOy1ki2RyZ8OP9w/ISRKFVamMEkISdKTQhI09uX+lGbU+BkewySO2Xlx+fZ9svmecLmY3cPh0TQjVySjokERf6Tmv9ywawZdqAUHRHZsuPMhbns5b9zt2D314J5r9G+bIdUknN4oaOQHBf0RiA==, Mensagem = z4lkh/KLZZiaIRE+rQjJNgPV2vsjlqfGpSJeM/eswnKXfpv3KvTgRoxlZKwU6SlI
+2024-06-11 05:53:58 - Chave Secreta Descriptografada: e871b15fc737cb865c48977f8c0cd1b0040d3468a6aa7871bf0741ecad296c40
+2024-06-11 05:53:58 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 05:53:58 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: teste
+2024-06-11 05:53:58 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:06:12 - Processando mensagem do remetenteId: 1
+2024-06-11 06:06:12 - Mensagem Criptografada JSON: teste
+2024-06-11 06:06:12 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:06:12 - Processando mensagem do remetenteId: 1
+2024-06-11 06:06:12 - Mensagem Criptografada JSON: teste
+2024-06-11 06:06:12 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:06:12 - Processando mensagem do remetenteId: 1
+2024-06-11 06:06:12 - Mensagem Criptografada JSON: teste
+2024-06-11 06:06:12 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:06:12 - Processando mensagem do remetenteId: 1
+2024-06-11 06:06:12 - Mensagem Criptografada JSON: teste
+2024-06-11 06:06:12 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:06:12 - Processando mensagem do remetenteId: 1
+2024-06-11 06:06:12 - Mensagem Criptografada JSON: QUERO VER
+2024-06-11 06:06:12 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:06:12 - Processando mensagem do remetenteId: 1
+2024-06-11 06:06:12 - Mensagem Criptografada JSON: teste
+2024-06-11 06:06:12 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:06:12 - Mensagens decodificadas: []
+2024-06-11 06:06:17 - Dados criptografados recebidos: IV = 4830137d5a86bd818eb60430cdd96fe0, SecretKey = JHbkWVuqKFScs3D1yjqzziEujQuDah85hLbt69DNunX31IU9CGCUMt8R+rQkCc4yfogQcIBVBZaGWcWyVhAS056ucJWfHNPi4jcYyHx0jIKnMbEcXlLyOXwKFMK7Z+qnsSBCd3XVik/EcZmQuZ+Cl8cgfgkl/UZEJiAeUjSxu3z74I9whYVRzYxhWuVrC+OQ7J1Z0lxz8ufpvel8vNt5hpKbRPzJab4clgnRzgcsIbbnE+Gr1sUqlm++xcj1IzUDMk1I9XTVRPrg2ZDZ+ZCSjyzNMhhl/xPbiz4ISa1CWE3T9XhYtw1J4nudWERmbIvossKGHuU3GvszRKQkCNmkVA==, Mensagem = HyK6XPerBJcn9piB2NxLAF3Fa+b7xm/gghMstbYQ3RH5a3sH4MwKLC+5N7YQvu/w
+2024-06-11 06:06:17 - Chave Secreta Descriptografada: 119fe3b41448c901a63207b67ec70218f73dca8e17c0f21185b7f4903e5b108d
+2024-06-11 06:06:17 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 06:06:17 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: teste
+2024-06-11 06:06:17 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:06:36 - Dados criptografados recebidos: IV = bd45bbccd4408d5816630abc1a0aba6f, SecretKey = RD989E0D77EeuvPP7J2EPpXuaHoXECnFpcjp2KWtODB9iHoENkqbd9ZUxdxqH2Gl/oJINQkuHMDUBYWj5beG7BTmNcdvT4Ye/lz/ETj6/eo14pW8fYvYL6bqa5tXi25j2zCs/BvCqJu5XWbWfMF9i82NG5ENTuYJjOspN2uImGgzKk9L/zFEuwrqfRiK/7aMnq4zg+lA32NI919FDn8vLCBWMsecUyI6M08BtYDWLoFIjGeb+NLQBOYoxqDf/fKdTGN7Nycln5rlrCKZeMgHUp/KU7YcJ4IdqfW3s2BKu8ozK4Ssp+j9eWg1iVmzXE2s130x65y//tRL9dRuLnGUhQ==, Mensagem = Y1zwogotSma9VEwmTXZMcuuTVnFte6vnvxN+lmEShHcFmL2pb4kp9A5U7UrvvkAe
+2024-06-11 06:06:36 - Chave Secreta Descriptografada: 02092ae3ba2e82f5f4f4e53cd339760b920bafd78b96905fe12e9309531a627c
+2024-06-11 06:06:36 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"ALOHA"}
+2024-06-11 06:06:36 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: ALOHA
+2024-06-11 06:06:36 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:11:16 - Dados criptografados recebidos: IV = b5886d8b5abcf973da6f428a610f3c3e, SecretKey = IbjHyYXwT/SIKQB0oWCh45QeBB+YJ5aeU95Qdi7IBILOYkgfkPBs5Z4jD9cv0t2hgRqgQBMKIEWcHxWrDCu6PP1dlgWkPyBo39XgexBtk6Bl3ill3RwFk/uC77R467dQi6f1pCHjL46xc1iEwkXNvBPxrfsU+vy/YBqHk0W1oO0V1VTsIC+uSSbCwaxVRCF4G6A9a5saQ4nPYDORfAIXyFPcwjA37oCFVWrtXZyW9f9R1dVLXjarD8XgC7DQxGRgA0ftDTFIP9cjeodp4ZdYGcm6EmT01tb9OMHdjmvGbLQbeSacfys+of9C4sqLzHS05rm99S+VXj3yIK8xhj2kIw==, Mensagem = UTukftvurGqdjMAphLbAMXPRNb3fdd08Ew+piDX5YCcfxYph5A9OWyUR3EA2sErmwB+Z5z447I6GaOxHSzqYRQ==
+2024-06-11 06:11:16 - Chave Secreta Descriptografada: edd0ba6895a9cdf208520bd081c4564bf58d527aa97d9a173790f7d7c6fc9e42
+2024-06-11 06:11:16 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"testeAAAAAAAAAAAAAAAAAA"}
+2024-06-11 06:11:16 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: testeAAAAAAAAAAAAAAAAAA
+2024-06-11 06:11:16 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:12:17 - Dados criptografados recebidos: IV = 9440df5d3ff6918baf6dfda0b249a1ad, SecretKey = mJ8V+4Ve2bX70pgNyo/RNNPxTRLXofuOSMbbnv8OWPBNM83YylXuQR6IhBWFitvsuYu6tFa1ok49DzPptnJU/mqIDbf2/4kEvydCoYIZNLmJ1qzfaxma5uRWdoYa4k1Yjf2Gk7MjOivabVDhfqGfiTqvbsJcUtvhf9TYshilrEch9IU5YQGjCD9kt7wCIH4L2upEJHL73v8j/jVAxZztyFn0VI1wgViEk8ExdB6liZkAjgkza/z/5j6Qg1x4yWfILida4LBZgGj9O50wNiDgGSfuC/A+ZjDKPEVmeTo3yGHWaTuq7HYdX8iojGETPVCPgD8aHyJypIeqLhAEmwyIuA==, Mensagem = 9UBKmWy+3Ww58QDW79FinssZeq3RYJgToQvmSq38E8jDWc1l23MxlHnfwuypH5JJ
+2024-06-11 06:12:17 - Chave Secreta Descriptografada: 60f2c495e61007f41a45f742db590339e77795c594ba1b5c1a64745ec19bba66
+2024-06-11 06:12:17 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 06:12:17 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: teste
+2024-06-11 06:12:17 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:13:13 - Dados criptografados recebidos: IV = 86049b5f09f42338b58acbfa83fe9c1a, SecretKey = hLLZJiWTBoIVa8Z7CmPbYIBaEyJziFXQwRZyVa12c/x2q6/MAa+1DX1WyfFFCho4qbMTxSDjdCUUxbgFbKVD36yvYqUyHAiBWItA/34gQfnRKs4RyGXau1fOH5gjvRy//rjQj10s4ORauoI8QHVrd2vEdOR2DtJl1vn7Vu8GbS+bNzTxD/yw5dV/Vqv6iMdhLilL4D0z4CmHIAOUTbF8B+CCrzwy1j6Y067+isKa11jS4EFKtkTCFxKId4nvA3fOtUE56ELRKe54GyQbt0cLVCUPGTMw0hH85OJQLolJXgQ7dtP0PfVURYEUBmKwbgYb/EY4Lw7sbKjjWzMUkoKxHg==, Mensagem = dgXfGxsmKKPlxF+qFhI092wqeb0eWx4T1qgDQ8b+toNlgmCpZJY29/e+nTXdsigG
+2024-06-11 06:13:13 - Chave Secreta Descriptografada: b07ae438fbe77776e36c35d58a1a171e994174ffb895ed6e31ef8918c66ffc62
+2024-06-11 06:13:13 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"testetes"}
+2024-06-11 06:13:13 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: testetes
+2024-06-11 06:13:13 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:16:39 - Dados criptografados recebidos: IV = 5599b6f8d6213da53f0fc73578ca9369, SecretKey = KNWdg72osT8u5kIt2wJKZOqKjnMLcHSuptcDw4QqdhIjmSoOIZoO2UsTsn0yevUKwGQUm5YTzOCUyEt85I6fN4AL/YVqrCM6ruIvThdlRay7fLYoK8J6ZWx4LxDoJHLGs+mDFYyqDccWaoEPPXGtILNWc8mb+PuW7qD12+f5eED5kCceHaEn/xUH8nT0LMVVNpGW2WqEuemeI2EbNY2pGlWCNaP0BydiK/tvoPdJbp0DnkfK/xYIdTqNMmBg+zCXQWnY/2jaD6PqAtNHbu8vadLpqmVyJ+61QX468ke0OS4FMo3Zw4cEQBQLGWsOOLrp0gg2HteD7H0K0YivwKbLTA==, Mensagem = 6tQovzyKKrYr+u06m/REmTdeIm/SaIUkcIBO99z9KEC4OHzSqpvk0BOyrd9tGz+t
+2024-06-11 06:16:39 - Chave Secreta Descriptografada: 5502bbd3ff22f739bd78d33b47f2097d9a587ff76aa14cdfa64aaeeb93b503e0
+2024-06-11 06:16:39 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"TESTE"}
+2024-06-11 06:16:39 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: TESTE
+2024-06-11 06:16:39 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:18:15 - Processando mensagem do remetenteId: 1
+2024-06-11 06:18:15 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:18:15 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:18:15 - Mensagens decodificadas: []
+2024-06-11 06:18:19 - Processando mensagem do remetenteId: 1
+2024-06-11 06:18:19 - Mensagem Criptografada JSON: TESTE
+2024-06-11 06:18:19 - Falha ao decodificar JSON da mensagem: Syntax error
+2024-06-11 06:18:19 - Mensagens decodificadas: []
+2024-06-11 06:20:04 - Dados criptografados recebidos: IV = 76c32a1a68a1a37d3cc4f8eea280542e, SecretKey = q2XVXQVWLCBxn2BqpqB4uIt0obwQeHP6i6syg+1RGL5o/KIe1edDM75yKiAmXIonsNWL06L4HqeNIhxJRMZ+VNh30LCt3xsnpsrMmFy5uZyCDT4rur7tP2VfJCS0KlXzmurAFNIIChl2Zy4/DA0ljfVyKPwJvKq7ZAPu3LSENhvWXI8nqpkYcKzvCiIkVYSG3X42mOQaxD4U5NcmKPU1fNPmwOxSdoFlaTLKCCtMGpoS09Eby/M6PEht7WnO7id9m1VlbsijwXy47iu0kezj7a22UYsvwy6+DRDjV/DrSoWDZHHNRzVdP8yMBoAdSE5x96nklhJCaawYRYpTl+ajKg==, Mensagem = ND1lCt4zaYYoXw6xU5cpBtCmJ6U1VOoBA9FhX5+p5nz6Gq2JPMzo0mYRSq2JTgtf
+2024-06-11 06:20:04 - Chave Secreta Descriptografada: e9b3cf7c93f65e007a81c5231507e838ce374a83a4d7d41feb944b8566d3cfd5
+2024-06-11 06:20:04 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"teste"}
+2024-06-11 06:20:04 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: teste
+2024-06-11 06:20:04 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:20:44 - Dados criptografados recebidos: IV = 3e4cd4703697b2523e64eb268fcb269f, SecretKey = rLTSKtk044k/2tFDsgIRCdzpGnFBaZyFXiYtEj1N9jMmAlNoialk6as/oy9ooZ2GhAjPz2tkAhg/Zd5tHeYbRNGeCM7ob6lJDx4lWsdbnJ8PdKe49O2pBl6Wxs388KE6RV0N28OE0jEhh9qo0ng7PqXIDJ7UzzpAI4akeTdofCqJOARQ3V0P3forVsRzfOSlkDxh9m69OvT0U2YHFRl4XaaXfVyd0/+vmTuL60gUHioFscNryfykHt0RZLMudjknhiWoVNrj17SLSna0JF1Uwby794922g6KRAcyDfj/SJT1QcQgpOIOZHqE8Dg/vTl1KDhjs2qur0tbBjeAw31gDA==, Mensagem = a2A4zDimTE43xsFh48UJyKNJP3yt6X2RiSl48GYAwjTJOu3D3xZ93+Dthm8Sn3KY
+2024-06-11 06:20:44 - Chave Secreta Descriptografada: ca40a11734159197a5af753fd019b8fecdc0f04ec982fc93ce13f89d22ad25f4
+2024-06-11 06:20:44 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"testeAAAA"}
+2024-06-11 06:20:44 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: testeAAAA
+2024-06-11 06:20:44 - Mensagem enviada com sucesso de 1 para 1.
+2024-06-11 06:22:06 - Dados criptografados recebidos: IV = 38a569acdc667804e9c46e25dfed1e70, SecretKey = UnCp6LlY+1fufhfhUGkLzsma5TDMN5hvZzU5cVWofGICuqSfWKXsQlvEoF1rIj3K1t/wldNjQSTsmkIcoh6YOtgqcpVA5Lh+ExRZXK6XdykW2GQvoF1PRZvKYsbbf9pv4QYuuzxRluYUmA6rIh1g7YnHSOd8O9Iv05QVfIPOy3XrB/imrAcrkEkx+nEHOGON7cUWVUoVZ+FdMn13UtbRxp9S3XJfY41jDYUdeumTCkNE+t+frXoq7MnpiOfbEbjH6gQiZ4JfI+xAVg2UIiGTRxxsw6X5tv84GF38utSKuY2zuv5xUxwESEoeBY9W70/qo1q29HGZnDX9NLLBWQQHNA==, Mensagem = 7iNq9oERc7jXlZV4m4ohxijBn4B2vCXTuS2OX0vWUH5N7xK6lSWftajqHubDgGKp
+2024-06-11 06:22:06 - Chave Secreta Descriptografada: a874ecefc8f30bbc72131e37c4bc5fd710c6610532d7d9780ed69466001059f5
+2024-06-11 06:22:06 - Mensagem Descriptografada: {"destinatarioId":1,"mensagem":"TESTEAAAA"}
+2024-06-11 06:22:06 - Preparando para inserir a mensagem no banco de dados. remetenteId: 1, destinatarioId: 1, mensagem: TESTEAAAA
+2024-06-11 06:22:06 - Mensagem enviada com sucesso de 1 para 1.

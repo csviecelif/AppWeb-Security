@@ -74,60 +74,57 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        try {
-            const response = await fetch('../cert/enviar_certificado.php');
-            if (!response.ok) {
-                throw new Error('Erro ao carregar o certificado');
-            }
-            const certText = await response.text();
-            const publicKey = extractPublicKey(certText);
+        const payload = await prepararDadosCriptografados({ destinatarioId, mensagem });
 
-            const encrypt = new JSEncrypt();
-            encrypt.setPublicKey(publicKey);
-            const secretKey = generateSecretKey();
-            console.log('Chave secreta gerada: ', secretKey);
-            const encryptedSecretKey = encrypt.encrypt(secretKey);
-            console.log('Chave secreta criptografada: ', encryptedSecretKey);
-
-            // Geração do IV
-            const iv = CryptoJS.lib.WordArray.random(16).toString(CryptoJS.enc.Hex);
-            const encryptedMessage = CryptoJS.AES.encrypt(mensagem, CryptoJS.enc.Hex.parse(secretKey), { iv: CryptoJS.enc.Hex.parse(iv) }).toString();
-            console.log('Mensagem criptografada: ', encryptedMessage);
-
-            const encryptedData = {
-                destinatarioId: destinatarioId,
-                data: encryptedSecretKey,
-                iv: iv,
-                mensagem: encryptedMessage
-            };
-
-            const enviarResponse = await fetch('enviar_mensagem.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(encryptedData)
-            });
-            const result = await enviarResponse.json();
-
-            if (result.success) {
+        fetch('enviar_mensagem.php', {
+            method: 'POST',
+            body: payload
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
                 alert('Mensagem enviada com sucesso!');
                 respostaContainer.innerHTML = '';
             } else {
-                alert('Erro ao enviar mensagem: ' + result.error);
+                alert('Erro ao enviar mensagem: ' + data.error);
             }
-        } catch (error) {
-            console.error('Erro ao enviar mensagem:', error);
-        }
+        })
+        .catch(error => console.error('Erro ao enviar mensagem:', error));
     }
 
-    function extractPublicKey(cert) {
-        const certificate = forge.pki.certificateFromPem(cert);
-        const publicKey = forge.pki.publicKeyToPem(certificate.publicKey);
+    async function prepararDadosCriptografados(data) {
+        const jsonObject = JSON.stringify(data);
+        
+        // Obtendo a chave pública do servidor
+        const publicKey = await getPublicKeyFromServer();
+
+        // Gerando chave secreta e IV
+        const secretKey = CryptoJS.lib.WordArray.random(32).toString(CryptoJS.enc.Hex);
+        const iv = CryptoJS.lib.WordArray.random(16).toString(CryptoJS.enc.Hex);
+
+        // Criptografando a mensagem
+        const encryptedMessage = CryptoJS.AES.encrypt(jsonObject, CryptoJS.enc.Hex.parse(secretKey), { iv: CryptoJS.enc.Hex.parse(iv) }).toString();
+
+        // Criptografando a chave secreta com a chave pública
+        const encryptedSecretKey = encryptSecretKey(secretKey, publicKey);
+
+        const formData = new FormData();
+        formData.append('iv', iv);
+        formData.append('secretKey', btoa(encryptedSecretKey));
+        formData.append('mensagem', btoa(encryptedMessage));
+
+        return formData;
+    }
+
+    async function getPublicKeyFromServer() {
+        const response = await fetch('../cert/public.key');
+        const publicKey = await response.text();
         return publicKey;
     }
 
-    function generateSecretKey() {
-        return CryptoJS.lib.WordArray.random(32).toString(CryptoJS.enc.Hex);
+    function encryptSecretKey(secretKey, publicKey) {
+        const encrypt = new JSEncrypt();
+        encrypt.setPublicKey(publicKey);
+        return encrypt.encrypt(secretKey);
     }
 });

@@ -2,37 +2,29 @@
 header('Content-Type: application/json');
 include '../login/connection.php';
 
-$query = "
-    SELECT 
-        b.userId, 
-        u.nomeCompleto, 
-        b.experiencia_profissional, 
-        b.habilidades_competencias, 
-        b.formacao_academica, 
-        b.idiomas_falados, 
-        b.area_interesse, 
-        b.expectativa_salarial, 
-        b.pais_origem, 
-        b.cv, 
-        b.certificados, 
-        b.foto, 
-        b.criado_em 
-    FROM 
-        buscar_emprego b
-    JOIN 
-        usuarios u ON b.userId = u.userId
-";
-$result = $con->query($query);
-
-$candidatos = [];
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $candidatos[] = $row;
-    }
+function logSecurityEvent($message) {
+    $logFile = 'security.log';
+    $date = new DateTime();
+    file_put_contents($logFile, $date->format('Y-m-d H:i:s') . " - " . $message . "\n", FILE_APPEND);
 }
 
-echo json_encode($candidatos);
+try {
+    $query = "SELECT userId, experiencia_profissional, habilidades_competencias, formacao_academica, idiomas_falados, data_nascimento, area_interesse, expectativa_salarial, pais_origem, cv, certificados, bio, foto FROM buscar_emprego";
+    $result = $con->query($query);
+
+    $candidatos = [];
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $candidatos[] = $row;
+        }
+    }
+
+    echo json_encode($candidatos);
+} catch (mysqli_sql_exception $e) {
+    logSecurityEvent("Erro ao buscar candidatos: " . $e->getMessage());
+    echo json_encode(['error' => 'Erro ao buscar candidatos']);
+}
 
 $con->close();
 ?>

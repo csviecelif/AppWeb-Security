@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
     .catch(error => console.error('Erro ao verificar sessão:', error));
-    console.log('DOM totalmente carregado e analisado');
-    
+
     const listaEmpregos = document.getElementById('jobList');
 
     if (!listaEmpregos) {
@@ -70,7 +69,7 @@ function mostrarCaixaResposta(destinatarioId, cargo, botao) {
     }
 }
 
-function enviarResposta(destinatarioId, botao) {
+async function enviarResposta(destinatarioId, botao) {
     const replyBox = botao.parentElement;
     const mensagem = replyBox.querySelector('textarea').value;
 
@@ -79,21 +78,66 @@ function enviarResposta(destinatarioId, botao) {
         return;
     }
 
-    fetch('enviar_mensagem.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ destinatarioId: destinatarioId, mensagem: mensagem })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Mensagem enviada com sucesso!');
-            replyBox.style.display = 'none';
-        } else {
-            alert('Erro ao enviar mensagem: ' + data.error);
-        }
-    })
-    .catch(error => console.error('Erro ao enviar mensagem:', error));
+    try {
+        const payload = await prepararDadosCriptografados({ destinatarioId, mensagem });
+
+        fetch('enviar_mensagem.php', {
+            method: 'POST',
+            body: payload
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Mensagem enviada com sucesso!');
+                replyBox.style.display = 'none';
+            } else {
+                alert('Erro ao enviar mensagem: ' + data.error);
+            }
+        })
+        .catch(error => console.error('Erro ao enviar mensagem:', error));
+    } catch (error) {
+        console.error('Erro ao enviar mensagem:', error);
+    }
+}
+
+async function prepararDadosCriptografados(data) {
+    const jsonObject = JSON.stringify(data);
+
+    // Obtendo a chave pública do servidor
+    const publicKey = await getPublicKeyFromServer();
+
+    // Gerando chave secreta e IV
+    const secretKey = CryptoJS.lib.WordArray.random(32).toString();
+    const iv = CryptoJS.lib.WordArray.random(16).toString();
+
+    // Criptografando a mensagem
+    const encryptedMessage = CryptoJS.AES.encrypt(jsonObject, CryptoJS.enc.Hex.parse(secretKey), { iv: CryptoJS.enc.Hex.parse(iv) }).toString();
+
+    // Criptografando a chave secreta com a chave pública
+    const encryptedSecretKey = encryptSecretKey(secretKey, publicKey);
+
+    const formData = new FormData();
+    formData.append('iv', iv);
+    formData.append('secretKey', encryptedSecretKey);
+    formData.append('mensagem', encryptedMessage);
+
+    console.log('Dados criptografados:', {
+        iv: iv,
+        secretKey: encryptedSecretKey,
+        mensagem: encryptedMessage
+    });
+
+    return formData;
+}
+
+async function getPublicKeyFromServer() {
+    const response = await fetch('../cert/public.key');
+    const publicKey = await response.text();
+    return publicKey;
+}
+
+function encryptSecretKey(secretKey, publicKey) {
+    const encrypt = new JSEncrypt();
+    encrypt.setPublicKey(publicKey);
+    return encrypt.encrypt(secretKey);
 }

@@ -1,4 +1,3 @@
-User
 <?php
 header('Content-Type: application/json');
 
@@ -12,6 +11,13 @@ function logSecurityEvent($message) {
 // Conexão com o banco de dados
 include '../login/connection.php';
 session_start();
+
+if (!isset($_SESSION['userId'])) {
+    echo json_encode([]);
+    logSecurityEvent("Usuário não autenticado");
+    exit();
+}
+
 $userId = $_SESSION['userId'];
 
 // Recupera as mensagens do banco de dados
@@ -29,6 +35,7 @@ while ($row = $result->fetch_assoc()) {
     logSecurityEvent("Processando mensagem do remetenteId: $remetenteId");
 
     // Verifica se a mensagem está no formato JSON correto
+    logSecurityEvent("Mensagem Criptografada JSON: " . $encryptedMessageJson);
     $encryptedMessage = json_decode($encryptedMessageJson, true);
     if ($encryptedMessage === null) {
         logSecurityEvent("Falha ao decodificar JSON da mensagem: " . json_last_error_msg());
@@ -38,28 +45,20 @@ while ($row = $result->fetch_assoc()) {
     // Carrega a chave privada
     $privateKeyPath = realpath(__DIR__ . '/../cert/private.key');
     if (!file_exists($privateKeyPath)) {
-        echo json_encode(['error' => 'Arquivo de chave privada não encontrado.']);
         logSecurityEvent("Arquivo de chave privada não encontrado.");
-        exit();
+        continue;
     }
 
     $privateKey = openssl_pkey_get_private('file://' . $privateKeyPath);
     if (!$privateKey) {
-        echo json_encode(['error' => 'Falha ao carregar a chave privada: ' . openssl_error_string()]);
         logSecurityEvent("Falha ao carregar a chave privada: " . openssl_error_string());
-        exit();
-    }
-
-    // Verifica se todos os campos necessários estão presentes
-    if (!isset($encryptedMessage['data']) || !isset($encryptedMessage['iv']) || !isset($encryptedMessage['mensagem'])) {
-        logSecurityEvent("Dados criptografados incompletos na mensagem.");
         continue;
     }
 
     // Descriptografa a chave secreta
     $encryptedData = base64_decode($encryptedMessage['data']);
-    $iv = $encryptedMessage['iv'];  // Aqui estamos assumindo que o IV já está em formato hexadecimal
-    $encryptedMessageText = $encryptedMessage['mensagem'];
+    $iv = hex2bin($encryptedMessage['iv']);
+    $encryptedMessageText = base64_decode($encryptedMessage['mensagem']);
     
     $success = openssl_private_decrypt($encryptedData, $decryptedSecretKey, $privateKey);
     if (!$success) {
@@ -67,12 +66,16 @@ while ($row = $result->fetch_assoc()) {
         continue;
     }
 
+    logSecurityEvent("Chave Secreta Descriptografada: " . $decryptedSecretKey);
+
     // Descriptografa a mensagem usando a chave secreta e o IV
-    $decryptedMessage = openssl_decrypt(base64_decode($encryptedMessageText), 'aes-256-cbc', hex2bin($decryptedSecretKey), OPENSSL_RAW_DATA, hex2bin($iv));
+    $decryptedMessage = openssl_decrypt($encryptedMessageText, 'aes-256-cbc', $decryptedSecretKey, OPENSSL_RAW_DATA, $iv);
     if ($decryptedMessage === false) {
         logSecurityEvent("Falha ao descriptografar a mensagem: " . openssl_error_string());
         continue;
     }
+
+    logSecurityEvent("Mensagem Descriptografada: " . $decryptedMessage);
 
     $mensagens[] = [
         'remetenteId' => $remetenteId,
@@ -87,4 +90,5 @@ logSecurityEvent("Mensagens decodificadas: " . json_encode($mensagens));
 echo json_encode($mensagens);
 $query->close();
 $con->close();
+
 ?>
