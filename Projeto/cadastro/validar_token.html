@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação de Token</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="validar_token.js" defer></script>
+    <title>Validação de Cadastro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.0.0/jsencrypt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
+    <script defer src="validar_token.js"></script>
 </head>
 <body>
-    <div class="validation-container">
-        <h1>Validação de Cadastro</h1>
-        <p>Um e-mail de confirmação foi enviado para <span id="emailDisplay"></span>. Insira o token recebido:</p>
-        <form id="validarTokenForm">
-            <input type="hidden" name="email" id="emailInput">
-            <label for="token">Token:</label>
-            <input type="text" id="token" name="token" required>
-            <input type="submit" value="Validar">
-        </form>
+    <div id="container" class="container">
+        <div class="divisao">
+            <h1>Validação de Cadastro</h1>
+            <p>Um e-mail de confirmação foi enviado para <span id="email-display"></span>. Insira o token recebido:</p>
+            <form id="validateForm">
+                <label for="token">Token:</label>
+                <input type="text" id="token" name="token" required>
+                <button type="button" id="validateButton">Validar</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

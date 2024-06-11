@@ -44,15 +44,15 @@ function get2FACode() {
             }
             return response.json();
         })
-        .then(data => gerarQRCode(data.secret))
+        .then(data => {
+            if (data.qrCode) {
+                const qrCodeContainer = document.getElementById('qrCodeContainer');
+                qrCodeContainer.innerHTML = '<img src="data:image/png;base64,' + data.qrCode + '" alt="QRCode do 2FA">';
+            } else {
+                console.error('Erro ao obter o código 2FA:', data.error);
+            }
+        })
         .catch(error => console.error('Erro ao obter o código 2FA:', error));
-}
-
-function gerarQRCode(secret) {
-    const tag = `otpauth://totp/GlobalOpportuna?secret=${secret}`;
-    const qrCodeUri = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(tag) + '&size=200x200&ecc=M';
-    const qrCodeContainer = document.getElementById('qrCodeContainer');
-    qrCodeContainer.innerHTML = '<img src="' + qrCodeUri + '" alt="QRCode do 2FA">';
 }
 
 function Ativar2FA() {
@@ -60,6 +60,10 @@ function Ativar2FA() {
     getCertificate().then(cert => {
         const publicKey = extractPublicKey(cert);
         const encryptedOTP = encryptMessage(userInput, publicKey);
+        
+        // Verifique o conteúdo criptografado no console
+        console.log('OTP criptografado:', encryptedOTP);
+        
         fetch('../cadastro/Ativar2FA.php', {
             method: 'POST',
             headers: {
@@ -86,6 +90,7 @@ function Ativar2FA() {
         .catch(error => console.error('Erro ao ativar 2FA:', error));
     });
 }
+
 
 function VerifyOTP() {
     const userInput = document.getElementById('form').elements['OTP'].value;

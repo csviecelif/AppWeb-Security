@@ -1,6 +1,12 @@
 <?php
 session_start();
 require_once '../login/connection.php';
+require_once '../vendor/autoload.php'; // Certifique-se de que o Autoload do Composer está correto
+
+use OTPHP\TOTP;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Writer\PngWriter;
+
 define('SESSION_EXPIRATION_TIME', 9000);
 
 function isSessionExpired() {
@@ -11,7 +17,6 @@ function isSessionExpired() {
     }
     return false;
 }
-
 
 $response = array();
 
@@ -27,7 +32,17 @@ if (isset($_SESSION['userId'])) {
         $stmt->close();
 
         if ($secret) {
-            $response['secret'] = $secret;
+            $totp = TOTP::create($secret);
+            $totp->setLabel('GlobalOpportuna');
+            $totp->setIssuer('GlobalOpportuna');
+            $otpAuthURL = $totp->getProvisioningUri();
+
+            // Gerar QR code
+            $qrCode = QrCode::create($otpAuthURL);
+            $writer = new PngWriter();
+            $result = $writer->write($qrCode);
+
+            $response['qrCode'] = base64_encode($result->getString());
         } else {
             $response['error'] = 'Erro ao obter o código 2FA do banco de dados.';
         }

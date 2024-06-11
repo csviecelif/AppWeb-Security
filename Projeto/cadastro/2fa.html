@@ -2,19 +2,19 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticação de Dois Fatores</title>
-    <link rel="stylesheet" href="../css/styles.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.0.0/jsencrypt.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
     <script defer src="../js/2fa.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <div id="container" class="container">
         <div class="divisao">
-            <div id="box" class="box-login"></div>
+            <div id="box" class="box-login">
+                <div id="qrCodeContainer"></div>
+            </div>
         </div>
     </div>
 </body>

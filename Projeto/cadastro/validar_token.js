@@ -1,37 +1,49 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const email = urlParams.get('email');
+// validar_token.js
+async function getCertificate() {
+    const response = await fetch('../cert/enviar_certificado.php');
+    const cert = await response.text();
+    return cert;
+}
 
-    if (email) {
-        document.getElementById('emailDisplay').textContent = email;
-        document.getElementById('emailInput').value = email;
-    }
+function extractPublicKey(cert) {
+    const certificate = forge.pki.certificateFromPem(cert);
+    const publicKey = forge.pki.publicKeyToPem(certificate.publicKey);
+    return publicKey;
+}
 
-    const form = document.getElementById('validarTokenForm');
-    form.addEventListener('submit', async function(event) {
-        event.preventDefault();
+function encryptToken(token, publicKey) {
+    const encrypt = new JSEncrypt();
+    encrypt.setPublicKey(publicKey);
+    return encrypt.encrypt(token);
+}
 
-        const token = document.getElementById('token').value;
-        const email = document.getElementById('emailInput').value;
+document.getElementById('validateButton').addEventListener('click', function() {
+    const token = document.getElementById('token').value;
+    const email = new URLSearchParams(window.location.search).get('email');
 
-        const data = { email, token };
+    getCertificate().then(cert => {
+        const publicKey = extractPublicKey(cert);
+        const encryptedToken = encryptToken(token, publicKey);
 
-        const response = await fetch('validar_token.php', {
+        fetch('validar_token.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            alert('Token validado com sucesso!');
-            // Redirecione para a página de autenticação de dois fatores
-            window.location.href = '2fa.html';
-        } else {
-            alert('Erro ao validar token: ' + result.error);
-        }
+            body: JSON.stringify({
+                email: email,
+                token: encryptedToken
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Token validado com sucesso!');
+                window.location.href = '2fa.html';
+            } else {
+                alert('Falha na validação do token: ' + data.error);
+            }
+        })
+        .catch(error => console.error('Erro:', error));
     });
 });
