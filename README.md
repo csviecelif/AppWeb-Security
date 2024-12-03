@@ -38,3 +38,10 @@ Busca e Publicação de Vagas
 
 Busca de Vagas: Os usuários podem procurar por oportunidades de emprego de acordo com suas qualificações e interesses.
 Publicação de Vagas: Empregadores podem publicar vagas de emprego detalhadas e gerenciar candidaturas.
+
+
+Comunicação entre Usuários
+
+Há a possibilidade de comunicação entre quem deseja e quem oferece a vaga, similar ao LinkedIn. 
+A comunicação sendo totalmente criptografada. 
+
